@@ -15,15 +15,14 @@ CREATE SCHEMA Inventario;
 CREATE SCHEMA Encuesta;
 CREATE SCHEMA Visita;
 
-
 -- ESQUEMA: Cliente
 CREATE TABLE Cliente.Nacionalidad (
-    id_nacionalidad INT PRIMARY KEY IDENTITY(1,1),
+    id_nacionalidad INT PRIMARY KEY,
     nombre NVARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE Cliente.Cliente (
-    id_cliente INT PRIMARY KEY IDENTITY(1,1),
+    id_cliente INT PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     apellido NVARCHAR(100) NOT NULL,
     email NVARCHAR(150) UNIQUE,
@@ -37,7 +36,7 @@ CREATE TABLE Cliente.Cliente (
 );
 
 CREATE TABLE Cliente.Telefono (
-    id_telefono INT PRIMARY KEY IDENTITY(1,1),
+    id_telefono INT PRIMARY KEY,
     id_cliente INT NOT NULL,
     telefono NVARCHAR(20) NOT NULL,
     principal BIT DEFAULT 1,
@@ -48,18 +47,18 @@ CREATE TABLE Cliente.Telefono (
 
 -- ESQUEMA: Habitacion
 CREATE TABLE Habitacion.Tipo (
-    id_tipo INT PRIMARY KEY IDENTITY(1,1),
+    id_tipo INT PRIMARY KEY,
     nombre NVARCHAR(50) NOT NULL UNIQUE,
     capacidad_base INT NOT NULL CHECK (capacidad_base > 0)
 );
 
 CREATE TABLE Habitacion.Estado (
-    id_estado INT PRIMARY KEY IDENTITY(1,1),
+    id_estado INT PRIMARY KEY,
     nombre NVARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE Habitacion.Habitacion (
-    id_habitacion INT PRIMARY KEY IDENTITY(1,1),
+    id_habitacion INT PRIMARY KEY,
     numero NVARCHAR(10) NOT NULL UNIQUE,
     id_tipo INT NOT NULL,
     capacidad INT NOT NULL CHECK (capacidad > 0),
@@ -70,7 +69,7 @@ CREATE TABLE Habitacion.Habitacion (
 );
 
 CREATE TABLE Habitacion.EstadoActual (
-    id_estado_actual INT PRIMARY KEY IDENTITY(1,1),
+    id_estado_actual INT PRIMARY KEY,
     id_habitacion INT NOT NULL UNIQUE,
     id_estado INT NOT NULL,
     fecha_actualizacion DATETIME DEFAULT GETDATE(),
@@ -83,17 +82,17 @@ CREATE TABLE Habitacion.EstadoActual (
 
 -- ESQUEMA: Reserva
 CREATE TABLE Reserva.Fuente (
-    id_fuente INT PRIMARY KEY IDENTITY(1,1),
+    id_fuente INT PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE Reserva.Estado (
-    id_estado INT PRIMARY KEY IDENTITY(1,1),
+    id_estado INT PRIMARY KEY,
     nombre NVARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE Reserva.Reserva (
-    id_reserva INT PRIMARY KEY IDENTITY(1,1),
+    id_reserva INT PRIMARY KEY,
     id_cliente INT NOT NULL,
     id_habitacion INT NOT NULL,
     id_fuente INT NOT NULL,
@@ -111,7 +110,7 @@ CREATE TABLE Reserva.Reserva (
 );
 
 CREATE TABLE Reserva.EstadoActual (
-    id_estado_actual INT PRIMARY KEY IDENTITY(1,1),
+    id_estado_actual INT PRIMARY KEY,
     id_reserva INT NOT NULL UNIQUE,
     id_estado INT NOT NULL,
     fecha_actualizacion DATETIME DEFAULT GETDATE(),
@@ -124,12 +123,12 @@ CREATE TABLE Reserva.EstadoActual (
 
 -- ESQUEMA: Pago
 CREATE TABLE Pago.Estado (
-    id_estado INT PRIMARY KEY IDENTITY(1,1),
+    id_estado INT PRIMARY KEY,
     nombre NVARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE Pago.Transaccion (
-    id_pago INT PRIMARY KEY IDENTITY(1,1),
+    id_pago INT PRIMARY KEY,
     id_reserva INT NOT NULL,
     fecha_pago DATE NOT NULL,
     monto DECIMAL(10, 2) NOT NULL CHECK (monto > 0),
@@ -140,7 +139,7 @@ CREATE TABLE Pago.Transaccion (
 );
 
 CREATE TABLE Pago.EstadoActual (
-    id_estado_actual INT PRIMARY KEY IDENTITY(1,1),
+    id_estado_actual INT PRIMARY KEY,
     id_pago INT NOT NULL UNIQUE,
     id_estado INT NOT NULL,
     fecha_actualizacion DATETIME DEFAULT GETDATE(),
@@ -153,18 +152,18 @@ CREATE TABLE Pago.EstadoActual (
 
 -- ESQUEMA: Empleado
 CREATE TABLE Empleado.Puesto (
-    id_puesto INT PRIMARY KEY IDENTITY(1,1),
+    id_puesto INT PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL UNIQUE,
     departamento NVARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Empleado.Turno (
-    id_turno INT PRIMARY KEY IDENTITY(1,1),
+    id_turno INT PRIMARY KEY,
     nombre NVARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE Empleado.Empleado (
-    id_empleado INT PRIMARY KEY IDENTITY(1,1),
+    id_empleado INT PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     apellido NVARCHAR(100) NOT NULL,
     id_puesto INT NOT NULL,
@@ -176,7 +175,7 @@ CREATE TABLE Empleado.Empleado (
 );
 
 CREATE TABLE Empleado.TurnoAsignado (
-    id_asignacion INT PRIMARY KEY IDENTITY(1,1),
+    id_asignacion INT PRIMARY KEY,
     id_empleado INT NOT NULL,
     id_turno INT NOT NULL,
     activo BIT DEFAULT 1,
@@ -190,7 +189,7 @@ CREATE TABLE Empleado.TurnoAsignado (
 
 -- ESQUEMA: Tarea
 CREATE TABLE Tarea.Asignacion (
-    id_tarea INT PRIMARY KEY IDENTITY(1,1),
+    id_tarea INT PRIMARY KEY,
     id_empleado INT NOT NULL,
     descripcion NVARCHAR(255) NOT NULL,
     fecha_asignacion DATE NOT NULL DEFAULT GETDATE(),
@@ -201,7 +200,7 @@ CREATE TABLE Tarea.Asignacion (
 );
 
 CREATE TABLE Tarea.Horario (
-    id_horario INT PRIMARY KEY IDENTITY(1,1),
+    id_horario INT PRIMARY KEY,
     id_tarea INT NOT NULL UNIQUE,
     hora_inicio TIME NOT NULL,
     hora_fin TIME NOT NULL,
@@ -213,7 +212,7 @@ CREATE TABLE Tarea.Horario (
 
 -- ESQUEMA: Mantenimiento
 CREATE TABLE Mantenimiento.Registro (
-    id_mantenimiento INT PRIMARY KEY IDENTITY(1,1),
+    id_mantenimiento INT PRIMARY KEY,
     id_habitacion INT NOT NULL,
     fecha_inicio DATE NOT NULL DEFAULT GETDATE(),
     fecha_fin DATE,
@@ -225,7 +224,7 @@ CREATE TABLE Mantenimiento.Registro (
 );
 
 CREATE TABLE Mantenimiento.Costo (
-    id_costo INT PRIMARY KEY IDENTITY(1,1),
+    id_costo INT PRIMARY KEY,
     id_mantenimiento INT NOT NULL UNIQUE,
     costo DECIMAL(10,2) NOT NULL CHECK (costo >= 0),
     
@@ -235,13 +234,13 @@ CREATE TABLE Mantenimiento.Costo (
 
 -- ESQUEMA: Producto
 CREATE TABLE Producto.Unidad (
-    id_unidad INT PRIMARY KEY IDENTITY(1,1),
+    id_unidad INT PRIMARY KEY,
     nombre NVARCHAR(20) NOT NULL UNIQUE,
     simbolo NVARCHAR(5)
 );
 
 CREATE TABLE Producto.Producto (
-    id_producto INT PRIMARY KEY IDENTITY(1,1),
+    id_producto INT PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     id_unidad INT NOT NULL,
     ubicacion NVARCHAR(100),
@@ -252,7 +251,7 @@ CREATE TABLE Producto.Producto (
 );
 
 CREATE TABLE Producto.Stock (
-    id_stock INT PRIMARY KEY IDENTITY(1,1),
+    id_stock INT PRIMARY KEY,
     id_producto INT NOT NULL UNIQUE,
     stock_actual INT NOT NULL DEFAULT 0 CHECK (stock_actual >= 0),
     stock_minimo INT NOT NULL DEFAULT 0 CHECK (stock_minimo >= 0),
@@ -263,12 +262,12 @@ CREATE TABLE Producto.Stock (
 
 -- ESQUEMA: Inventario
 CREATE TABLE Inventario.TipoMovimiento (
-    id_tipo INT PRIMARY KEY IDENTITY(1,1),
+    id_tipo INT PRIMARY KEY,
     nombre NVARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE Inventario.Movimiento (
-    id_movimiento INT PRIMARY KEY IDENTITY(1,1),
+    id_movimiento INT PRIMARY KEY,
     id_producto INT NOT NULL,
     fecha DATETIME NOT NULL DEFAULT GETDATE(),
     id_tipo INT NOT NULL,
@@ -283,12 +282,12 @@ CREATE TABLE Inventario.Movimiento (
 
 -- ESQUEMA: Encuesta
 CREATE TABLE Encuesta.Fuente (
-    id_fuente INT PRIMARY KEY IDENTITY(1,1),
+    id_fuente INT PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE Encuesta.Satisfaccion (
-    id_encuesta INT PRIMARY KEY IDENTITY(1,1),
+    id_encuesta INT PRIMARY KEY,
     id_reserva INT NOT NULL UNIQUE,
     fecha DATETIME NOT NULL DEFAULT GETDATE(),
     puntaje INT NOT NULL CHECK (puntaje BETWEEN 1 AND 10),
@@ -302,9 +301,8 @@ CREATE TABLE Encuesta.Satisfaccion (
 );
 
 -- ESQUEMA: Visita
-
 CREATE TABLE Visita.Registro (
-    id_visita INT PRIMARY KEY IDENTITY(1,1),
+    id_visita INT PRIMARY KEY,
     id_reserva INT NOT NULL,
     fecha_visita DATETIME NOT NULL DEFAULT GETDATE(),
     
