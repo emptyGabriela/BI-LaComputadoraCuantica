@@ -119,7 +119,7 @@ LEFT JOIN Tarea.Horario h ON a.id_tarea = h.id_tarea;
 SELECT
     m.id_mantenimiento,
     m.fecha_inicio,
-    m.fecha_fin,
+    ISNULL(m.fecha_fin, DATEADD(day, 1, m.fecha_inicio)) AS fecha_fin,
     m.descripcion,
     c.costo,
     h.numero AS habitacion_numero

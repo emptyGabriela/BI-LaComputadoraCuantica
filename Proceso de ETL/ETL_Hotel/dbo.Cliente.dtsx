@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{B09EA76B-82E5-4570-9219-008986196ABF}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{C6C3EF6E-20FB-4638-9D73-D0636131D319}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADZVvfdHL3Ag878ltZbDCHuoWdVaOk0wfGEJtjM9DeWIwAAAAAOgAAAAAIAACAAAACqDl38NP+1Bxiyp2d7lPr6sWY+RM9zBl0UhvPM5TS6uSAAAACNFPYmlUIPonlG/acMThT5r+qN+vRX/Eya+dP/OKAxaEAAAAAoeU+DkP032iw1pA6ccPjYGgooM/ZxLZvjTjIr+oEXOgW9ZdcRmg5IglhTNlPqfGxwzC7NTBpEEIBe+jYRmLAI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADsrn9a7VYYaWKNAf582KHxsvWX/KWjhyEBUvS1VFROGgAAAAAOgAAAAAIAACAAAADUr1fj4EmAw3ZCgjLj8UkKazset9jKFtl1NUSvd3W+iCAAAABs/3r+9FKtjqlFccVMrr9PmPf2RyrWsfCqXkXtJ+smCEAAAADgd+yTYMT/jyb9rCD5XZgNYNpbUkWSvc4g8eBHO+VcVtZmNoeDNxwEqBKVp6C78rdztQF1/wmzkCnxIk3EJJee</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,92 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAADQvk7/tg2srxm2W1cpJUB5jxjCme86+nt/VEQfjvC7gAAAAAOgAAAAAIAACAAAAAyU3/K4gS1keGSJX+SaG0PFM3V67ZwW8DpojVcQYyyqCAAAAAByfhcFsM5KPXNdgzzyQ1HfSCjIYvFvG/mMhy6nIZro0AAAABiRdUXAP0/6EEnNP64ZZeSxzyu3me8F672zoQ+o5ZwVkwYH64Qx1zPdT4uD+NjpwtP/XmWsJ0YmEhFY9yVw1wv</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAfJ/5Iam5TxEYHhppAD9wO1NnM5uk4DG9SmTIhagvG9AAAAAAOgAAAAAIAACAAAAAsYJbVCkV7d5lofoibZvF0FJo9CqNsVjt/sUelVPJ3qyAAAADVQS8CwpV0c0cwwxafpRkh7ziRgjRg8K9lujVDnhD3zUAAAABreU6GmxpXPoSylN5krvRyEpJlXwYhh6HCknmcSsqJvHd1l4ALQjWVjPSFQthEcvqwLV6xk1cmiWIfN/7PDE+v</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost,1433.HotelDW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{85BE4814-28A1-4ABD-988A-EF6D799197D1}"
+      DTS:ObjectName="localhost,1433.HotelDW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost,1433;User ID=sa;Initial Catalog=HotelDW;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{85BE4814-28A1-4ABD-988A-EF6D799197D1}localhost,1433.HotelDW.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA7r+8fjyQfPkoQm7dTXFCdl4Ts8nPHsEnbsYK8m0WBqgAAAAAOgAAAAAIAACAAAADdWrjRF9AjksTrkAr19Ft4sVf1AHvvcjbuL1WE5KI6ISAAAABKWqiLwaSvswrdRMUicd+MGMK5LVkQS6Q2iwUGzSm490AAAAAhS7CAo/fuKhKVb2hbXw7wQUGdfiWYoJMCZCrEdNuY14rIA5RoW9FGvQGGwm40rWtfS47xFYv8Elw2cXMuhdUm</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost,1433.HotelOLTP.etl_user]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{353E531E-47C5-4B87-8F5B-72E96BC53919}"
+      DTS:ObjectName="localhost,1433.HotelOLTP.etl_user">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost,1433;User ID=etl_user;Initial Catalog=HotelOLTP;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{353E531E-47C5-4B87-8F5B-72E96BC53919}localhost,1433.HotelOLTP.etl_user;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACkhky7HXUOW7AizjLFcq7IeNi70G+S84OghX5Ysra/ngAAAAAOgAAAAAIAACAAAACkhcHssWXJPHgHOanOWmbzW987pCDHGSxw483l6W2cASAAAAD9l6hPLxOW6XYjRdTtBAET+qEyXKj9Top7cRcwIIoRkUAAAACV4SGX3BfVS7x+lT9CV9f4vdhSjCnDe/KAV/oRnl+w3hqpkQa1+AhJL2wE9ekjeh1px19X1EHlr5fVHfd2vsDt</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost,1433.HotelOLTP.etl_user 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B5C1F844-B314-43EF-A9D2-8AC5CDE328FB}"
+      DTS:ObjectName="localhost,1433.HotelOLTP.etl_user 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost,1433;User ID=etl_user;Initial Catalog=HotelOLTP;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{B5C1F844-B314-43EF-A9D2-8AC5CDE328FB}localhost,1433.HotelOLTP.etl_user 1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABHdBqCZnohfF0wJp6Orcu1WuCD7VqeR/2Yy6jyvdCOuAAAAAAOgAAAAAIAACAAAAAGEkzS65gLA3EPCPa80mqJ1GjT1isqg/+cCTcbOv/UYyAAAADTv83bV3ULwrriAjhlDYSY8TGL+4d2fioVPOCaAgMWBEAAAAAuOYtsVZhwu34f8tXOCPe+1iLIbTxhtcb5TrrSnaK9j+b3S9eEa4AtNJ+V7844j/YbwAwGwAvG1CKGmBl7cGM3</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost,1433.HotelOLTP.etl_user 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{001F49CD-1A72-4598-A4A2-E86DFE2EB0C5}"
+      DTS:ObjectName="localhost,1433.HotelOLTP.etl_user 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost,1433;User ID=etl_user;Initial Catalog=HotelOLTP;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{001F49CD-1A72-4598-A4A2-E86DFE2EB0C5}localhost,1433.HotelOLTP.etl_user 2;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB6FleMHO2+u3m9rGdwDXaU+Ir8QkmWVGSZp0CQ6s2FnwAAAAAOgAAAAAIAACAAAABE0VYz7ypqqSgM+g2CIYzWF4HzguXNhuv07HcE/a80lSAAAACfPywfdYhNFt6+JWwkWpBcrmoM/HPtC9OupZJrp29AeEAAAACslFmckk6mkoAzhat+M84WV4CILvMIrnMw5sFzjszZDMTQCMw+1hJA2t8I7W3ACF+Ndd4b+jABFAuYovUBKM0g</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost,1433.HotelOLTP.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{17BB201A-D8F8-4005-9438-50A803906E0C}"
+      DTS:ObjectName="localhost,1433.HotelOLTP.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost,1433;User ID=sa;Initial Catalog=HotelOLTP;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{17BB201A-D8F8-4005-9438-50A803906E0C}localhost,1433.HotelOLTP.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABAE0dF9rAY1RXuiaEgWXQ7FW6AZrua4scYHPPqj1ErdgAAAAAOgAAAAAIAACAAAAC72vuvreUdCYzM7JSdeq5jE0oTJRtl/buXZlh+wRia7yAAAACLsCynVxKrs9Hurhs2MtuxO3tavmE8+slCMnb0DzIUIkAAAAAMOl+0yAwFHdCh8cpmlCAJlPstQCPDZxF6N3UYZOEpHDEt2lYjt6HpK7tAlVpt5Izik/YmLZcqHm2duPp94ZU/</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -104,7 +189,7 @@
                   dataType="System.Int32"
                   description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
@@ -125,8 +210,8 @@
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[192.168.64.1.HotelDW.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[192.168.64.1.HotelDW.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.HotelDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.HotelDW.sa]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -223,10 +308,6 @@
                       dataType="wstr"
                       length="50"
                       name="nacionalidad" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[telefonos]"
-                      dataType="nText"
-                      name="telefonos" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -323,8 +404,8 @@ GROUP BY
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos\Origen de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[192.168.64.1.HotelOLTP.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[192.168.64.1.HotelOLTP.sa]"
+                  connectionManagerID="Package.ConnectionManagers[localhost,1433.HotelOLTP.etl_user]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost,1433.HotelOLTP.etl_user]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -543,37 +624,37 @@ GROUP BY
         <NodeLayout
           Size="170,42"
           Id="Package\Tarea Flujo de datos\Origen de OLE DB"
-          TopLeft="30,195" />
+          TopLeft="308,189" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\Destino de OLE DB"
-          TopLeft="164,291" />
+          TopLeft="458,322" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="115,237">
+          TopLeft="393,231">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136.5,54"
+              EndConnector="152.5,91"
               Start="0,0"
-              End="136.5,46.5">
+              End="152.5,83.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23" />
+                    End="0,41.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23"
-                    Point2="0,27"
-                    Point3="4,27" />
+                    Point1="0,41.5"
+                    Point2="0,45.5"
+                    Point3="4,45.5" />
                   <mssgle:LineSegment
-                    End="132.5,27" />
+                    End="148.5,45.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="132.5,27"
-                    Point2="136.5,27"
-                    Point3="136.5,31" />
+                    Point1="148.5,45.5"
+                    Point2="152.5,45.5"
+                    Point3="152.5,49.5" />
                   <mssgle:LineSegment
-                    End="136.5,46.5" />
+                    End="152.5,83.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -586,14 +667,6 @@ GROUP BY
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Origen de OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB">
     <Properties>
       <Property>
@@ -603,6 +676,14 @@ GROUP BY
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

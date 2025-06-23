@@ -2,23 +2,58 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ETL_Hotel</Name>
-    <LastWriteTime>2025-06-23T04:38:49.0534854Z</LastWriteTime>
+    <LastWriteTime>2025-06-23T22:18:07.4410945Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>ETL_Master.dtsx</Name>
-      <LastWriteTime>2025-06-23T04:36:41.715289Z</LastWriteTime>
+      <LastWriteTime>2025-06-23T22:06:34.6784403Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>dbo.Cliente.dtsx</Name>
-      <LastWriteTime>2025-06-23T04:36:41.7053643Z</LastWriteTime>
+      <LastWriteTime>2025-06-23T22:06:34.6844426Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>dbo.Habitacion.dtsx</Name>
-      <LastWriteTime>2025-06-23T04:36:41.6914118Z</LastWriteTime>
+      <Name>dbo.Hab.dtsx</Name>
+      <LastWriteTime>2025-06-23T21:42:31.9768599Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Reserva.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:06:34.6734375Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Pagos.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:06:34.6672008Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Empleado.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:14:12.7454416Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Tarea.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:14:10.6819759Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Mantenimiento.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:14:11.7694963Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Producto.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:18:07.4270906Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.MovimientoInventario.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:18:07.4210861Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

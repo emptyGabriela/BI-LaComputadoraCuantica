@@ -1,68 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{02AA8667-2074-E5EC-F365-39FCE74828BF}|ETL_Hotel.dtproj|C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\ETL_Master.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{02AA8667-2074-E5EC-F365-39FCE74828BF}|ETL_Hotel.dtproj|solutionrelative:ETL_Master.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02AA8667-2074-E5EC-F365-39FCE74828BF}|ETL_Hotel.dtproj|C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\dbo.Cliente.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{02AA8667-2074-E5EC-F365-39FCE74828BF}|ETL_Hotel.dtproj|solutionrelative:dbo.Cliente.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02AA8667-2074-E5EC-F365-39FCE74828BF}|ETL_Hotel.dtproj|C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\dbo.Habitacion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{02AA8667-2074-E5EC-F365-39FCE74828BF}|ETL_Hotel.dtproj|solutionrelative:dbo.Habitacion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.Cliente.dtsx [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\dbo.Cliente.dtsx",
-              "RelativeDocumentMoniker": "dbo.Cliente.dtsx",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\dbo.Cliente.dtsx [Dise\u00F1o]",
-              "RelativeToolTip": "dbo.Cliente.dtsx [Dise\u00F1o]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-06-23T04:24:04.562Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.Habitacion.dtsx [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\dbo.Habitacion.dtsx",
-              "RelativeDocumentMoniker": "dbo.Habitacion.dtsx",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\dbo.Habitacion.dtsx [Dise\u00F1o]",
-              "RelativeToolTip": "dbo.Habitacion.dtsx [Dise\u00F1o]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-06-23T04:28:38.583Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ETL_Master.dtsx [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\ETL_Master.dtsx",
-              "RelativeDocumentMoniker": "ETL_Master.dtsx",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\BI-LaComputadoraCuantica\\Proceso de ETL\\ETL_Hotel\\ETL_Master.dtsx [Dise\u00F1o]",
-              "RelativeToolTip": "ETL_Master.dtsx [Dise\u00F1o]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-06-23T04:21:16.629Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

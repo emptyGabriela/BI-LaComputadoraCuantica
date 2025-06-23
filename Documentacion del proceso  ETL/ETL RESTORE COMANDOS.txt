@@ -1,5 +1,7 @@
+-- Ejecutar en el EXEC de Docker
 cp /repo_data/HotelOLTP.bak /var/opt/mssql/data/
 
+-- Ejecutar este comando desde Azure Data Studio
 RESTORE DATABASE HotelOLTP
 FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak'
 WITH
@@ -13,7 +15,7 @@ RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak';
 
 -- CREACION DE USUARIO PARA DASHBOARDS 
 
-CREATE LOGIN etl_user WITH PASSWORD = 'Password2002';
+CREATE LOGIN etl_user WITH PASSWORD = 'Admin2002';
 
 USE HotelOLTP;
 GO
@@ -27,4 +29,3 @@ GO
 CREATE USER etl_user FOR LOGIN etl_user;
 EXEC sp_addrolemember 'db_datareader', 'etl_user';  -- Lectura
 EXEC sp_addrolemember 'db_datawriter', 'etl_user';  -- Escritura
-

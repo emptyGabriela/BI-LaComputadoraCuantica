@@ -10,8 +10,7 @@ CREATE TABLE dbo.Cliente (
     email NVARCHAR(150),
     fecha_nacimiento DATE,
     genero VARCHAR(20),
-    nacionalidad NVARCHAR(50),
-    telefonos NVARCHAR(MAX)
+    nacionalidad NVARCHAR(50)
 ); 
 
 -- Tabla dbo.Habitacion
