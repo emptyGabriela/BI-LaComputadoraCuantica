@@ -16,8 +16,7 @@ SELECT
         WHEN 'O' THEN 'No respondió'
         ELSE 'Desconocido'
     END AS genero,
-    n.nombre AS nacionalidad,
-    STRING_AGG(t.telefono, ', ') AS telefonos
+    n.nombre AS nacionalidad
 FROM Cliente.Cliente c
 LEFT JOIN Cliente.Nacionalidad n ON c.id_nacionalidad = n.id_nacionalidad
 LEFT JOIN Cliente.Telefono t ON c.id_cliente = t.id_cliente

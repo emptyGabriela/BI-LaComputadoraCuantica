@@ -1,0 +1,30 @@
+cp /repo_data/HotelOLTP.bak /var/opt/mssql/data/
+
+RESTORE DATABASE HotelOLTP
+FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak'
+WITH
+    MOVE 'HotelOLTP' TO '/var/opt/mssql/data/HotelOLTP.mdf',
+    MOVE 'HotelOLTP_Log' TO '/var/opt/mssql/data/HotelOLTP_log.ldf',
+    FILE = 1,
+    NOUNLOAD,
+    STATS = 5;
+
+RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak';
+
+-- CREACION DE USUARIO PARA DASHBOARDS 
+
+CREATE LOGIN etl_user WITH PASSWORD = 'Password2002';
+
+USE HotelOLTP;
+GO
+
+CREATE USER etl_user FOR LOGIN etl_user;
+EXEC sp_addrolemember 'db_datareader', 'etl_user';  -- Permiso de lectura
+
+USE HotelDW;
+GO
+
+CREATE USER etl_user FOR LOGIN etl_user;
+EXEC sp_addrolemember 'db_datareader', 'etl_user';  -- Lectura
+EXEC sp_addrolemember 'db_datawriter', 'etl_user';  -- Escritura
+
