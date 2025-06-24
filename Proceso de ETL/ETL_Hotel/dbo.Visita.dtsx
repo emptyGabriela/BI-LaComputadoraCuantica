@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="dbo Visita"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{38EDF805-93ED-4534-8904-97660BD892E0}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{339B0A91-29FA-4F79-949E-7CC42BBC4471}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAdBGpzNi3czl2OINJByiovrvU3GvF6Bu2iv4Cr7EAQ2gAAAAAOgAAAAAIAACAAAAAHmIS7PwfeVqnnEJSczeRSQItJPNqBMlBsJFXTuTikjyAAAAA08lZUiXR/h/DjUk0dEOvIAN023JY+kBkmay50RakyuUAAAACCrlSIZXgslbni4zeslusTtLdzBh0F03ZOz19BkE0yJAw4Fuz8BZyMe75qkaBMZ7TjPdiY+UybncWbOpQpOY60</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABGkX8SOL8AHvMyaS/LORCf4YsNi5lUEuzX0ZwLkgUXlAAAAAAOgAAAAAIAACAAAABme/s58245ajryh3qMTweX2nn4omqCZXQbfmLMcZK5wSAAAADLQU60liqoQW28sBkPT1QMnj1hUKltWsnI7q5fRuFuV0AAAADZ2RNlJsm7kTfq0Y8vtQxMd9oDJN9oLJQSvQHVFHKB0PgKKAQcUZczMlhyG3L/le76+IU/fGNFAPiyCeIJE6Y0</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAFcHyUc6Ten/mAPkWEW+kpm8RXMKLhdQbxJZ+AtweuLwAAAAAOgAAAAAIAACAAAACgRzREBcXdkqwh6xqywAyjA6vFRFIsvpwNhFi9u+uRoCAAAACsNBRnik9EGjWuscErrrT8qnYd0n/hFCabTj4DzvOYuUAAAADT1cJPVcLK0ZeYAwRwYMNrPXFIu4Kxaqkrrb8fKWoOXdDpLntivA7cvdRa4z3bveAxQMAEBZfGYm6V9fOzjSq8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAQwigptDGDKgYG79hDT37IsXhB8OHU1wa0nNQNjZ96DQAAAAAOgAAAAAIAACAAAAC42rrju8wPKJKZRxQNZRhaV5d0E1zSSG+AUAj0KuP1pCAAAABPhY0xI2JSxJfzF17Ijt2keM70VbZi4aGfGpaNMytyKUAAAAATf7BX+uHH88UuWzl16/yZUxgtiOGEhLn15pyGtpEmeG2lfTjJYwyam6EalAJUPJ5/Eoywmx1SsGTiefv4n578</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +63,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB5MNDCDHWinACKTgOCzI4AJhvbI1ewI1BdEm0hyKt0tAAAAAAOgAAAAAIAACAAAAAXhTANS40ecjQRVBVJlSMXsj8krahoX2pULHpv0usvsCAAAAATWwIaDbrRNlI7TPfZqtHoPOY1NiVDItvhdQLDDQXHbEAAAABgNAQyZKaRLn6VKtCJv1onv9yu9E2ukffCE/J81N6xBsXNlT9J8GyB5UC1n6yAwNWkPi/lrRpxJeADszWPCdIj</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB91DFvxZRj8zwbLMw/EXNesDuZa6A4TYw//H1nzrAN7QAAAAAOgAAAAAIAACAAAAB1GVyEFIYl9aHaqUZm8SNJb/mN7vFJDRaNyIguEYHefCAAAABeLFml8+arR9uacLD+40Arka91IBJ3zhmfVNlPdrj2lkAAAADSr5gVtcRIOacjMY8urh9lbpXEkyL9PpO28BkRv9kGP+zwwnD/9PVpBssDk5WRHi801HOsfd1KMHMf5f3AFcqD</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -80,7 +80,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC06+0kpzDFziVLnrE4DMxNLfP3L2ZavOfRH4xe5fthagAAAAAOgAAAAAIAACAAAADEHHH261u3EfiKsd+j8yPeIJ0qt2w7AfZzCJ+BU7rMRCAAAAAQyxHJ4LvX/5/9LEKSx/vumYfG5sdzGv0Xl3e4BuJmfUAAAACbNqlQlNJF5xt44NFs47MdgDXRkhC95gpcYkPwI8Tjc1GBXGx6FbpXDRpR/qDCAkaATzvnowgo0ggLxayrI1pw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC2tR4+1hb8o6jgJ4d1jn/GP1fLqw4Ovn9OS8kyMBWLcgAAAAAOgAAAAAIAACAAAADDOuwojVx3CXeQucUYbDdcBHu/2J0JKVQThfdDpwnL3SAAAABqqjGMxEbkVCz2H123eE3wmKZEsOt9HHhiMKjwa8/tYUAAAABDska6r6TdF5O7P4aqAU7B5XaaJQ6S4A0ypXuvID5IBMsG3HVuZ3I1bXdTZrla9ZTg9wnrBKPv0dXqrP/U3d35</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -97,7 +97,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA3O/+yc4qsVHklzFBI8R3e3ZFHz0NSebVezA/gHTsYuAAAAAAOgAAAAAIAACAAAABa98PCYCT23zEVJF2LxlpfCko2A9cAPB/tTqQmcO/o5iAAAAALA2UMznkLpidtUWHT3dl1uaXo4K0nuMIoEKizVtTCXkAAAABzQcSQdu+x8GlkPg4Nt4ETGrSrSfDF3w64X+dO13pRpfTurx6g5GfbQ8pahGtn7cGgJZHuDXMQvI340PcTmHBr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAtJi5UESIUmVJMrJsLu42hRBd0kiaaJaoyc6jM70upDAAAAAAOgAAAAAIAACAAAACYq7HVCBuj+1bRQkoeV0dDr5ukWvecfq3ogpyOkNyiUiAAAADCC092OlC1//gEc9LUXeN2iNfTl/n6CH5F9fOO5uW0XUAAAABaZKg+AhDHKrzN5PL7ScAnxLvBcCG2JAxIsUcIEzLvLXUiVYriS6wOSeeFZYwWyn0Z9KlIHUR4IPK0ZWVy6UTn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -114,7 +114,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC+LvW5jFvmPlfAujWVKZdu9ZF3+xrMuhiDJ82UtvIiYAAAAAAOgAAAAAIAACAAAAA9CyfrTgH5dqOM1CL7t9YBSDleg7dZ+lPvrQmUbYHOWiAAAABk+nh5j/vx+laFLsOguZT0wkjRnFpzu5KBLeec1fdphUAAAAA4fR+Kj1NZAQYIqcvVzI8zNhGqqBrJG42iAjQKQS4H8s0mbjaINzDniTAfjtEsMSlxxeMAOI5NHyvaR9i6dWYd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACDkAMssRpePPrBCaWhjrcWIQpi5IwIz+S6Yjw7I287egAAAAAOgAAAAAIAACAAAAA6aH8TvFYidLiRT9/fwO3vc0p3fVIyk3QhTvD0Gy75+iAAAABbtC6x7AmI/Nb6sF4AYWo5HGvQIWOFCIv+sQmtnXMzUkAAAACiDsPSg+4x7Hisn9guYJPK9GeXOvYhmeho2njJ7Ib1DJ6fwVCO9XZxB2C0C13B1hB9FgBTCPOp8BCj2mV2Vikj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -131,7 +131,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADTnxfNhTImPXMW+fHMuluJx5kuYMT7rvHc4qN+eO8tIgAAAAAOgAAAAAIAACAAAADGOlfBRdsnN5ez9Ac4QAY1xC60Gt2AY3jR5/DVBx3ipyAAAAAhqW3l/C228I2QQM7/8lR1o4nCvAl2yMPpDwnElzoRS0AAAABxtLvqCVcrOb8KhSzIQ7Z20IIdYuANrGiSY8wKjk72UrM3kQ5Ij6fG9BFFzaTT573tr0uND7lcxS6rvsOfDdzB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAKv5raDOsOxXVVVy01QUQNL74DcFRjziSHRJoyovTaQwAAAAAOgAAAAAIAACAAAADgGmPPX+rtF03Z4VLPgFkjsNqaoNMH8Orwo7kbvl5w5yAAAADEaQ1MEviqACI82bDdyBuHJt9Dzo+A69tPHfTZqk5Is0AAAABOvSfXI61056XomtKN2sjebhQO37rGEaEv0aKzO4cM8ZkQYP7wJCytD0NeoNsg4lQnULPN9XvfDRV6YquutKTf</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -229,6 +229,24 @@
                       cachedName="id_cliente"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_cliente]"
                       lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[id_cliente]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_visita]"
+                      cachedDataType="i4"
+                      cachedName="id_visita"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_visita]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[id_visita]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[fecha_visita]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="fecha_visita"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_visita]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[fecha_visita]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_reserva]"
+                      cachedDataType="i4"
+                      cachedName="id_reserva"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_reserva]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[id_reserva]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">

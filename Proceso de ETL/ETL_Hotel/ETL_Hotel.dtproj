@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">KSTRO</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAACAAAAAAAQZgAAAAEAACAAAAAbr0LlRGL37evvO8nd1oOd3ni4T6sj5A/EYEh4FpWGwgAAAAAOgAAAAAIAACAAAABp3XRLZ1G+DdSwvDDLOL8lZFPibk2sk/O7Rx3bOguwvpAAAADKAdsjRV8sIH8tJaNvHr5y+yhexU2GWV7PgoBiL1ELcL+NHrosbMtow5lfeLYmHM+9KFENpx2PwquuMF6X1z8+tzChXYi6Hvhq5V8Jf3IfKWZCXwhcYnrQutIpTpa/Stcj/p9f9S1xa7NEPTtOljonVPyADPeHzIlOucuv2HGn1W9DG4DJiNAyq0mh06gQylhAAAAA2f6m6iHVD5CaSkHs321hYxFbQ6HwFHvhm7I8aNGZVhWh5OPVlTBHlWk0II+aE8T+96vw1AWM/XqsSeIIsO5h7A==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAACAAAAAAAQZgAAAAEAACAAAAC/Jg4LFU9qOXwePH4Jeup+A4j4kZLNYPuU6EkQbMpQwgAAAAAOgAAAAAIAACAAAAC3deNg6/01BzEybH2naQ/2BHPinwqpuZAJ8IMgcAWdcpAAAACP09JAi/h4aTf89OsrE9fANdj6xHKKeV+5O/ZUMhkv0c6n7IPoLni1zWqNRTb+EK/iJ0FIDMA+1wZwVxzvBE8N1QJtQi9kawelf6ELyGi9tsjg+tRiPEIW7bSrMt01/e47PpQu6pWrGICxyyj0CcNlXTujkDneV4JP00CZKBeN3lWnfo/lHs96b4JVu8kX98ZAAAAAqDyC2rsuE5QKbaduT054LtH6ZLI1FaLztw7gU81y5chsNqg3o/6a4VNmA+UkWIY0Iu12C4/tuXg71KR1Kga7Og==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -41,6 +41,7 @@
           <SSIS:Package SSIS:Name="dbo.MovimientoInventario.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="dbo.Encuesta.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="dbo.Visita.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="ETL_Master.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -5756,6 +5757,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="ETL_Master.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E3D8646A-A1BE-4A63-A66F-A39E1A8E119C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">ETL_Master</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2A1D29AF-EB06-453E-9848-8534D91C586A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

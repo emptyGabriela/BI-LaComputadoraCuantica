@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="dbo Tarea"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{C0FED996-4664-4F98-A8FB-AAFDBD29C9A3}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{6AB64505-3547-4688-9C34-50E51CABA4A6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACL2td+auNPcVEfSGtqDjwfnoA3NmhM6jfRvRh4hAdLJQAAAAAOgAAAAAIAACAAAACg/Jip8bFFsVAm4lTK7+gSiqDbBDKZM6eWWrOaUSSUMiAAAABLXrEB5ygBHTjA4+m30DtBB1CPk49yutOB/m0uDy51iEAAAAAnb/mXftxncgGApp6f2fo0Db48KTwOu36Lwih0XOQ9a57LZBWy/PfXxS78R+q18VdKfp3k3PwrSdrIV+AkokOe</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAATO+0/T+FwhHUNG3i8qfBFXq7s+6mNIr2kisU2+/flAAAAAAAOgAAAAAIAACAAAAD+JDk1x9/HzfHcLa/tk4U4RZt/OBLVyoHGBKSHCl/I6CAAAABP89YMskf9ROvPkVVUXBJxCQ330GvwDUCwHFNET4aKkUAAAAANmEIrnbCHLXwzcgTwHlfoK9Lx9KT3W+znwffJ0sC010ixtGAw56tJxGeSnC8HfEYdZMAhzytn5dvPhz35s5QV</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHCEOtX71gcYVNYJc+RnzfBFiZz70JicoUV5x63PxuCAAAAAAOgAAAAAIAACAAAAAK3mUkJaFeCbiNabpdiIpkB5utf8ipGRGkekw1h+Nv/yAAAAB/YRBzldFQooBJ0GLtUwo4dQf6tzBRYiqOFDIEHAKRVEAAAAAL8FHDF2YvyyX2bq30kXFMgFygYniVOixon5Dann94/YEZUZCcXOg+D5psY9HSfbBj+nOT/t1RrKwnOXbb1PjH</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjEMB3KsnMU2s0GXyQ7Z+TAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAqHR74JkNRzLp7FtZsLSiDaD/irAjNyZh4YC3kkw82yQAAAAAOgAAAAAIAACAAAABq51FQXPHWtOjUgkYY43BGe5GobIzJeJEwogqIw39F3yAAAAAh0PcUMr131ig3Q3YvWjy04dcQlvNKFUyR4jSZcjm5pEAAAABiKtQc/IjU3EWlBmvoVvBOyCRLHQtVcebjMx0zGt8WsXF1pjoASmzt+uU9mQDj3z/Uv7jVkcnyJT7leswnJNSk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -150,6 +150,47 @@
                       cachedName="fecha_asignacion"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_asignacion]"
                       lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[fecha_asignacion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_tarea]"
+                      cachedDataType="i4"
+                      cachedName="id_tarea"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_tarea]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[id_tarea]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[descripcion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="descripcion"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[descripcion]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[descripcion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[evaluacion]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="evaluacion"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[evaluacion]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[evaluacion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nombre_empleado]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="nombre_empleado"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[nombre_empleado]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[nombre_empleado]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[hora_inicio]"
+                      cachedDataType="dbTime2"
+                      cachedName="hora_inicio"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[hora_inicio]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[hora_inicio]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[hora_fin]"
+                      cachedDataType="dbTime2"
+                      cachedName="hora_fin"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[hora_fin]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[hora_fin]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">

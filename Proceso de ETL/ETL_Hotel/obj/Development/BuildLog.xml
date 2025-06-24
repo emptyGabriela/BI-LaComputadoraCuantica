@@ -2,15 +2,10 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ETL_Hotel</Name>
-    <LastWriteTime>2025-06-23T22:18:07.4410945Z</LastWriteTime>
+    <LastWriteTime>2025-06-24T01:40:38.1012616Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
-    <ProjectBuildItemInfo>
-      <Name>ETL_Master.dtsx</Name>
-      <LastWriteTime>2025-06-23T22:06:34.6784403Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>dbo.Cliente.dtsx</Name>
       <LastWriteTime>2025-06-23T22:06:34.6844426Z</LastWriteTime>
@@ -38,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>dbo.Tarea.dtsx</Name>
-      <LastWriteTime>2025-06-23T22:14:10.6819759Z</LastWriteTime>
+      <LastWriteTime>2025-06-24T01:46:34.611942Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -54,6 +49,21 @@
     <ProjectBuildItemInfo>
       <Name>dbo.MovimientoInventario.dtsx</Name>
       <LastWriteTime>2025-06-23T22:18:07.4210861Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Encuesta.dtsx</Name>
+      <LastWriteTime>2025-06-23T22:23:54.0104381Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>dbo.Visita.dtsx</Name>
+      <LastWriteTime>2025-06-24T01:49:54.2388324Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ETL_Master.dtsx</Name>
+      <LastWriteTime>2025-06-24T01:46:34.6334793Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

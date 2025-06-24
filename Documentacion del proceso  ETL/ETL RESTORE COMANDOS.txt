@@ -29,3 +29,40 @@ GO
 CREATE USER etl_user FOR LOGIN etl_user;
 EXEC sp_addrolemember 'db_datareader', 'etl_user';  -- Lectura
 EXEC sp_addrolemember 'db_datawriter', 'etl_user';  -- Escritura
+
+-- SCRIPT PARA HACER TESTING DEL ETL COMPLETO
+
+-- Conteos por tabla
+SELECT COUNT(*) AS Cantidad_Cliente FROM dbo.Cliente;
+SELECT COUNT(*) AS Cantidad_Encuesta FROM dbo.Encuesta;
+SELECT COUNT(*) AS Cantidad_Habitacion FROM dbo.Habitacion;
+SELECT COUNT(*) AS Cantidad_Pago FROM dbo.Pago;
+SELECT COUNT(*) AS Cantidad_Reserva FROM dbo.Reserva;
+SELECT COUNT(*) AS Cantidad_Empleado FROM dbo.Empleado;
+SELECT COUNT(*) AS Cantidad_Tarea FROM dbo.Tarea;
+SELECT COUNT(*) AS Cantidad_Producto FROM dbo.Producto;
+SELECT COUNT(*) AS Cantidad_Mantenimiento FROM dbo.Mantenimiento;
+SELECT COUNT(*) AS Cantidad_MovimientoInventario FROM dbo.MovimientoInventario;
+SELECT COUNT(*) AS Cantidad_Visita FROM dbo.Visita;
+
+-- Eliminación de datos
+DELETE FROM dbo.Cliente;
+DELETE FROM dbo.Habitacion;
+DELETE FROM dbo.Pago;
+DELETE FROM dbo.Reserva;
+DELETE FROM dbo.Empleado;
+DELETE FROM dbo.Tarea;
+DELETE FROM dbo.Producto;
+DELETE FROM dbo.Mantenimiento;
+DELETE FROM dbo.Encuesta;
+DELETE FROM dbo.MovimientoInventario;
+DELETE FROM dbo.Visita;
+
+-- Comando para generar el backup desde Azure Data Studio
+BACKUP DATABASE HotelDW
+TO DISK = N'/var/opt/mssql/backup/HotelDW.bak'
+WITH NOFORMAT, NOINIT,  
+NAME = N'HotelDW-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10;
+
+-- Comando para copiar el .bak fuera del contenedor (Powershell)
+docker cp sql_server_2022:/var/opt/mssql/backup/HotelDW.bak C:\Users\Diego\Desktop\YUESBI18.06.25\HotelDW.bak
