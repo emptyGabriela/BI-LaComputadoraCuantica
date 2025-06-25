@@ -1,20 +1,22 @@
--- Ejecutar en el EXEC de Docker
-cp /repo_data/HotelOLTP.bak /var/opt/mssql/data/
+/*  LISTA DE COMANDOS PARA REALIZAR ETL EN SSIS VS 2022  */
 
--- Ejecutar este comando desde Azure Data Studio
-RESTORE DATABASE HotelOLTP
-FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak'
-WITH
-    MOVE 'HotelOLTP' TO '/var/opt/mssql/data/HotelOLTP.mdf',
-    MOVE 'HotelOLTP_Log' TO '/var/opt/mssql/data/HotelOLTP_log.ldf',
-    FILE = 1,
-    NOUNLOAD,
-    STATS = 5;
+-- Comando para instalar sql server en docker 
+docker run -d `
+  -e "ACCEPT_EULA=Y" `
+  -e "SA_PASSWORD=ClaveSecreta" `
+  -v C:\sqlserver_data:/repo_data `
+  -p 1433:1433 `
+  --name sql_server_2022 `
+  mcr.microsoft.com/mssql/server:2022-latest
 
-RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak';
+* Iniciar una nueva conexion en Azure colocando localhost como nombre de base de datos 
+-- localhost,1433
+-- usuario sa
+-- password ClaveSecreta
+-- Authentication type: SQL login 
+-- Trust server True
 
 -- CREACION DE USUARIO PARA DASHBOARDS 
-
 CREATE LOGIN etl_user WITH PASSWORD = 'Admin2002';
 
 USE HotelOLTP;
@@ -58,7 +60,7 @@ DELETE FROM dbo.Encuesta;
 DELETE FROM dbo.MovimientoInventario;
 DELETE FROM dbo.Visita;
 
--- Comando para generar el backup desde Azure Data Studio
+-- Comando para generar el backup desde Azure Data Studio (para compartirlo y generar Dashborads)
 BACKUP DATABASE HotelDW
 TO DISK = N'/var/opt/mssql/backup/HotelDW.bak'
 WITH NOFORMAT, NOINIT,  
@@ -66,3 +68,22 @@ NAME = N'HotelDW-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10;
 
 -- Comando para copiar el .bak fuera del contenedor (Powershell)
 docker cp sql_server_2022:/var/opt/mssql/backup/HotelDW.bak C:\Users\Diego\Desktop\YUESBI18.06.25\HotelDW.bak
+
+/*  Comandos para restauracion de la base de datos DW */
+
+-- Colocar el archivo .bak en la carpeta C:\sqlserver_data
+
+-- Ejecutar en el EXEC de Docker
+cp /repo_data/HotelOLTP.bak /var/opt/mssql/data/
+
+-- Ejecutar este comando desde Azure Data Studio
+RESTORE DATABASE HotelOLTP
+FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak'
+WITH
+    MOVE 'HotelOLTP' TO '/var/opt/mssql/data/HotelOLTP.mdf',
+    MOVE 'HotelOLTP_Log' TO '/var/opt/mssql/data/HotelOLTP_log.ldf',
+    FILE = 1,
+    NOUNLOAD,
+    STATS = 5;
+
+RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak';
