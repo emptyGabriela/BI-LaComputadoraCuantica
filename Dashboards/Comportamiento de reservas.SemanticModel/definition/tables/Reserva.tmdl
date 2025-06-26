@@ -1,0 +1,135 @@
+table Reserva
+	lineageTag: ca682575-d3f5-49bc-9242-945b22ac5960
+
+	column id_reserva
+		dataType: int64
+		formatString: 0
+		lineageTag: fa606763-102a-4f98-9dd2-71ad2f730226
+		summarizeBy: none
+		sourceColumn: id_reserva
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_reserva
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7b952561-7652-4c26-a35a-edb48b83e7ee
+		summarizeBy: none
+		sourceColumn: fecha_reserva
+
+		variation Variación
+			isDefault
+			relationship: 193ca79a-71d1-4fa7-9ee2-4e1b650594c4
+			defaultHierarchy: LocalDateTable_75bbafb5-1612-4945-bf50-40dfbe07ed3f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column check_in
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 449434a1-6f7d-433b-b720-4265b117c99c
+		summarizeBy: none
+		sourceColumn: check_in
+
+		variation Variación
+			isDefault
+			relationship: 5dd29ff4-e116-4c13-a9ac-09f4ccedb2eb
+			defaultHierarchy: LocalDateTable_e0e3809c-8bff-41fa-8e51-7cc0bbede867.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column check_out
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ad6d6a68-2bce-4e51-92b5-564c6d550eda
+		summarizeBy: none
+		sourceColumn: check_out
+
+		variation Variación
+			isDefault
+			relationship: 55b41993-7ede-43ed-a5eb-4265c6c6636e
+			defaultHierarchy: LocalDateTable_b6a7d4ef-11ea-4440-b055-33e5df70b63e.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 49cd8f98-b821-4c79-b9af-eb8d1daf1ad9
+		summarizeBy: none
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente_nombre
+		dataType: string
+		lineageTag: 58fc133e-8dd9-46be-b18d-751c6a391405
+		summarizeBy: none
+		sourceColumn: cliente_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_habitacion
+		dataType: int64
+		formatString: 0
+		lineageTag: 9aee1473-626c-4005-9a8b-fbc99da0479c
+		summarizeBy: sum
+		sourceColumn: id_habitacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column habitacion_numero
+		dataType: string
+		lineageTag: 76d230e5-b44e-44e4-8ea6-e957e3f53c8d
+		summarizeBy: none
+		sourceColumn: habitacion_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column fuente_reserva
+		dataType: string
+		lineageTag: 23610c50-fdd7-46fc-b07e-addb8edf794b
+		summarizeBy: none
+		sourceColumn: fuente_reserva
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_reserva
+		dataType: string
+		lineageTag: 1192392e-7cdb-43c3-89fd-9c92d96d4b92
+		summarizeBy: none
+		sourceColumn: estado_reserva
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_estado
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 22bc4adc-d253-479a-a264-0ec4118dce22
+		summarizeBy: none
+		sourceColumn: fecha_estado
+
+		variation Variación
+			isDefault
+			relationship: ab3bcb06-fd7e-4928-8f6e-314fad63f0df
+			defaultHierarchy: LocalDateTable_c3466895-cd0a-438e-972d-0794a4afb927.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Reserva = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost,1433", "HotelDW"),
+				    dbo_Reserva = Origen{[Schema="dbo",Item="Reserva"]}[Data]
+				in
+				    dbo_Reserva
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

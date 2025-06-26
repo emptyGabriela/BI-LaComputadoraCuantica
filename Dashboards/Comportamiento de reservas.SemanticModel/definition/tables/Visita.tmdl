@@ -1,0 +1,57 @@
+table Visita
+	lineageTag: 52a8a495-fc1d-46a6-b92b-22d231dfa37e
+
+	column id_visita
+		dataType: int64
+		formatString: 0
+		lineageTag: 086abd38-5486-476c-8f64-3ab669cb8555
+		summarizeBy: sum
+		sourceColumn: id_visita
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_visita
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f378b0be-3a78-4de8-bf91-75a313fc6d58
+		summarizeBy: none
+		sourceColumn: fecha_visita
+
+		variation Variación
+			isDefault
+			relationship: bceec1bf-0431-420c-9e02-380d65e79953
+			defaultHierarchy: LocalDateTable_902f14e5-f7ee-450c-8ea5-2de8f00ecea9.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_reserva
+		dataType: int64
+		formatString: 0
+		lineageTag: c4672e30-bdd9-4200-9cf0-2a4a6b87e507
+		summarizeBy: none
+		sourceColumn: id_reserva
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d46f761-c523-4524-8994-cea80f2450fa
+		summarizeBy: sum
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Visita = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost,1433", "HotelDW"),
+				    dbo_Visita = Origen{[Schema="dbo",Item="Visita"]}[Data]
+				in
+				    dbo_Visita
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

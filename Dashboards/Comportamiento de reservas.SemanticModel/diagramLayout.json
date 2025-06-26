@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 378.28448678012376,
+            "y": -50
+          },
+          "nodeIndex": "Cliente",
+          "nodeLineageTag": "9a49ccd7-8c10-4783-bd52-2087c8347d07",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 336.74071499738966,
+            "y": 224.39752253601318
+          },
+          "nodeIndex": "Encuesta",
+          "nodeLineageTag": "22ac77cf-99c7-43cf-ba99-f83aadea6945",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 185.50719271324067,
+            "y": 501.12179312702926
+          },
+          "nodeIndex": "Reserva",
+          "nodeLineageTag": "ca682575-d3f5-49bc-9242-945b22ac5960",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 49.999999999999986,
+            "y": 231.92867331195856
+          },
+          "nodeIndex": "Visita",
+          "nodeLineageTag": "52a8a495-fc1d-46a6-b92b-22d231dfa37e",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

@@ -1,0 +1,73 @@
+table Encuesta
+	lineageTag: 22ac77cf-99c7-43cf-ba99-f83aadea6945
+
+	column id_encuesta
+		dataType: int64
+		formatString: 0
+		lineageTag: cdd4d89c-7db8-477c-8903-b21a93c70dc2
+		summarizeBy: sum
+		sourceColumn: id_encuesta
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 81a22ef0-6944-49d2-8371-fad1facbbc7d
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variación
+			isDefault
+			relationship: 6dc31b7e-d7bd-4666-a972-5fa2b69633ab
+			defaultHierarchy: LocalDateTable_621f6514-a43d-4380-a2cc-343b9b58d449.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column puntaje
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f177ec1-8629-4724-9867-588f699136e3
+		summarizeBy: sum
+		sourceColumn: puntaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column comentario
+		dataType: string
+		lineageTag: 3919e918-4cff-456c-9931-5b0484a82069
+		summarizeBy: none
+		sourceColumn: comentario
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_reserva
+		dataType: int64
+		formatString: 0
+		lineageTag: ee56bf6e-281f-40c4-b458-d26e1f13be91
+		summarizeBy: none
+		sourceColumn: id_reserva
+
+		annotation SummarizationSetBy = Automatic
+
+	column fuente_encuesta
+		dataType: string
+		lineageTag: 406dabfc-676c-43a2-a646-da8ef7e2bb82
+		summarizeBy: none
+		sourceColumn: fuente_encuesta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Encuesta = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost,1433", "HotelDW"),
+				    dbo_Encuesta = Origen{[Schema="dbo",Item="Encuesta"]}[Data]
+				in
+				    dbo_Encuesta
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Comportamiento de reservas"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8eb1869a-1515-4b2e-9fd7-1db4f1398673"
+  }
+}

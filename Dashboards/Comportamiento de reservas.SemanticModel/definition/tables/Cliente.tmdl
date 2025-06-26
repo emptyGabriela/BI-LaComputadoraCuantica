@@ -1,0 +1,74 @@
+table Cliente
+	lineageTag: 9a49ccd7-8c10-4783-bd52-2087c8347d07
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 571e7065-c561-44d6-8001-c04b5aa55e89
+		summarizeBy: none
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: ec3e4bbd-49a7-4373-9d89-82196d47e58b
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column apellido
+		dataType: string
+		lineageTag: 42266f4c-5ea6-4aa2-8c3a-6b39ce2c21b6
+		summarizeBy: none
+		sourceColumn: apellido
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_nacimiento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 77aa56ca-2cb2-41c1-be61-30892a1198d1
+		summarizeBy: none
+		sourceColumn: fecha_nacimiento
+
+		variation Variación
+			isDefault
+			relationship: 8e5be9ed-1443-4b93-ab2c-81eafebe162f
+			defaultHierarchy: LocalDateTable_1496a144-131f-4f52-90ab-63216783ba72.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column genero
+		dataType: string
+		lineageTag: 446c20f7-8fb1-4625-bbab-4157b257a2cb
+		summarizeBy: none
+		sourceColumn: genero
+
+		annotation SummarizationSetBy = Automatic
+
+	column nacionalidad
+		dataType: string
+		lineageTag: 54d175f9-48e6-49f7-b19b-d90d4d0c2584
+		summarizeBy: none
+		sourceColumn: nacionalidad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Cliente = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost,1433", "HotelDW"),
+				    dbo_Cliente = Origen{[Schema="dbo",Item="Cliente"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(dbo_Cliente,{"email"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

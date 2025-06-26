@@ -1,0 +1,31 @@
+model Model
+	culture: es-SV
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-SV
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Reserva","Visita","Encuesta","Cliente"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.144.878.0 (25.06)+9cca29236de5114792f4d7188221f91ad4a5cc50
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Reserva
+ref table DateTableTemplate_d63e8d9a-4963-4f88-b0ae-6188b13f5cf4
+ref table LocalDateTable_75bbafb5-1612-4945-bf50-40dfbe07ed3f
+ref table LocalDateTable_e0e3809c-8bff-41fa-8e51-7cc0bbede867
+ref table LocalDateTable_b6a7d4ef-11ea-4440-b055-33e5df70b63e
+ref table LocalDateTable_c3466895-cd0a-438e-972d-0794a4afb927
+ref table Visita
+ref table LocalDateTable_902f14e5-f7ee-450c-8ea5-2de8f00ecea9
+ref table Encuesta
+ref table LocalDateTable_621f6514-a43d-4380-a2cc-343b9b58d449
+ref table Cliente
+ref table LocalDateTable_1496a144-131f-4f52-90ab-63216783ba72
+
+ref cultureInfo es-SV
+
