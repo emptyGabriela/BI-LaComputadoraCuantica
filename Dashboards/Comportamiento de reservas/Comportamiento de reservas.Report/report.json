@@ -24,16 +24,79 @@
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
-      "name": "ee3ec26320390dc69334",
+      "name": "b8278756b0ce1306d2a7",
       "visualContainers": [
         {
-          "config": "{\"name\":\"9422f8cd30092adaaba0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"0aec504dc38c322bb988\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1001.5819209039548,\"y\":25.310734463276837,\"z\":3,\"width\":278.41807909604523,\"height\":148.24858757062148,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PromedioNochesPorReserva\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioNochesPorReserva\"},\"Name\":\"Medidas.PromedioNochesPorReserva\",\"NativeReferenceName\":\"PromedioNochesPorReserva\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioNochesPorReserva\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 280.00,
-          "width": 280.00,
-          "x": 10.00,
+          "height": 148.25,
+          "width": 278.42,
+          "x": 1001.58,
+          "y": 25.31,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"48791bc792a850650640\",\"layouts\":[{\"id\":0,\"position\":{\"x\":234.40729483282675,\"y\":0,\"z\":1,\"width\":279.1489361702128,\"height\":282.0668693009119,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.ClientesRecurrentes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesRecurrentes\"},\"Name\":\"Medidas.ClientesRecurrentes\",\"NativeReferenceName\":\"ClientesRecurrentes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesRecurrentes\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 282.07,
+          "width": 279.15,
+          "x": 234.41,
+          "y": 0.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"b25c5e654a494d3dd46b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":748.936170212766,\"y\":25.288753799392097,\"z\":4,\"width\":278.17629179331306,\"height\":148.8145896656535,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PromedioVisitasPorCliente\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioVisitasPorCliente\"},\"Name\":\"Medidas.PromedioVisitasPorCliente\",\"NativeReferenceName\":\"PromedioVisitasPorCliente\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioVisitasPorCliente\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 148.81,
+          "width": 278.18,
+          "x": 748.94,
+          "y": 25.29,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"b3d7a5acaa0ba1aa41e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":279.1489361702128,\"height\":278.17629179331306,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.ClientesNuevos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesNuevos\"},\"Name\":\"Medidas.ClientesNuevos\",\"NativeReferenceName\":\"ClientesNuevos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesNuevos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 278.18,
+          "width": 279.15,
+          "x": 0.00,
           "y": 0.00,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b8c5268d1d542726be40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":662.5,\"y\":343.75,\"z\":7,\"width\":365,\"height\":238.75,\"tabOrder\":7}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Calendario.NombreMes\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.TotalReservasPorMes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendario\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NombreMes\"},\"Name\":\"Calendario.NombreMes\",\"NativeReferenceName\":\"NombreMes\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorMes\"},\"Name\":\"Medidas.TotalReservasPorMes\",\"NativeReferenceName\":\"TotalReservasPorMes1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 238.75,
+          "width": 365.00,
+          "x": 662.50,
+          "y": 343.75,
+          "z": 7.00
+        },
+        {
+          "config": "{\"name\":\"dcbbfcb74ac6571407b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":477.5683890577508,\"y\":0,\"z\":2,\"width\":278.17629179331306,\"height\":278.17629179331306,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PorcentajeSatisfaccionPromedio\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PorcentajeSatisfaccionPromedio\"},\"Name\":\"Medidas.PorcentajeSatisfaccionPromedio\",\"NativeReferenceName\":\"PorcentajeSatisfaccionPromedio\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PorcentajeSatisfaccionPromedio\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 278.18,
+          "width": 278.18,
+          "x": 477.57,
+          "y": 0.00,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"e04b061fbb407ba244d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1001.823708206687,\"y\":173.13069908814592,\"z\":5,\"width\":278.17629179331306,\"height\":147.8419452887538,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.TotalReservasActivas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasActivas\"},\"Name\":\"Medidas.TotalReservasActivas\",\"NativeReferenceName\":\"TotalReservasActivas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasActivas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 147.84,
+          "width": 278.18,
+          "x": 1001.82,
+          "y": 173.13,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"fff7472ed15d7e928a0a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.29641693811075,\"y\":287.6872964169381,\"z\":6,\"width\":287.6872964169381,\"height\":185.53745928338762,\"tabOrder\":6}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Reserva.fuente_reserva\"},{\"queryRef\":\"Medidas.TotalReservasPorFuente\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"Reserva\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fuente_reserva\"},\"Name\":\"Reserva.fuente_reserva\",\"NativeReferenceName\":\"fuente_reserva\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorFuente\"},\"Name\":\"Medidas.TotalReservasPorFuente\",\"NativeReferenceName\":\"TotalReservasPorFuente\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorFuente\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 185.54,
+          "width": 287.69,
+          "x": 7.30,
+          "y": 287.69,
+          "z": 6.00
         }
       ],
       "width": 1280.00

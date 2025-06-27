@@ -6,26 +6,28 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Reserva","Visita","Encuesta","Cliente"]
+annotation PBI_QueryOrder = ["Cliente","Visita","Encuesta","Reserva"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.144.878.0 (25.06)+9cca29236de5114792f4d7188221f91ad4a5cc50
+annotation PBIDesktopVersion = 2.144.1155.0 (25.06)+46435b07013d2a234d7fd007083a9e70b8e79f1c
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table Reserva
-ref table DateTableTemplate_d63e8d9a-4963-4f88-b0ae-6188b13f5cf4
-ref table LocalDateTable_75bbafb5-1612-4945-bf50-40dfbe07ed3f
-ref table LocalDateTable_e0e3809c-8bff-41fa-8e51-7cc0bbede867
-ref table LocalDateTable_b6a7d4ef-11ea-4440-b055-33e5df70b63e
-ref table LocalDateTable_c3466895-cd0a-438e-972d-0794a4afb927
-ref table Visita
-ref table LocalDateTable_902f14e5-f7ee-450c-8ea5-2de8f00ecea9
-ref table Encuesta
-ref table LocalDateTable_621f6514-a43d-4380-a2cc-343b9b58d449
 ref table Cliente
-ref table LocalDateTable_1496a144-131f-4f52-90ab-63216783ba72
+ref table DateTableTemplate_621bc5c4-b38c-45fb-8d66-261a178759ea
+ref table LocalDateTable_e6b7ccf0-cdd9-42f1-8e6c-ed046563cd22
+ref table Visita
+ref table LocalDateTable_bbfbf237-f807-4262-a616-7f15e761472f
+ref table Encuesta
+ref table LocalDateTable_eee8e28d-5ffa-48c3-a118-bdee197a1c46
+ref table Reserva
+ref table LocalDateTable_02c2cb13-8bea-484c-ad62-83a773884d9b
+ref table LocalDateTable_e0869dc1-9808-431b-b9ef-7f4a05e938a0
+ref table LocalDateTable_60b81e40-4fd4-4fa2-8eac-bd6daf47610f
+ref table Medidas
+ref table Calendario
+ref table LocalDateTable_32831f57-3204-43a2-9c96-233eaa2e2dd2
 
 ref cultureInfo es-SV
 

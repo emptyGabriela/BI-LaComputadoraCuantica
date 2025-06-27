@@ -1,56 +1,60 @@
-relationship 193ca79a-71d1-4fa7-9ee2-4e1b650594c4
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Reserva.fecha_reserva
-	toColumn: LocalDateTable_75bbafb5-1612-4945-bf50-40dfbe07ed3f.Date
-
-relationship 5dd29ff4-e116-4c13-a9ac-09f4ccedb2eb
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Reserva.check_in
-	toColumn: LocalDateTable_e0e3809c-8bff-41fa-8e51-7cc0bbede867.Date
-
-relationship 55b41993-7ede-43ed-a5eb-4265c6c6636e
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Reserva.check_out
-	toColumn: LocalDateTable_b6a7d4ef-11ea-4440-b055-33e5df70b63e.Date
-
-relationship ab3bcb06-fd7e-4928-8f6e-314fad63f0df
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Reserva.fecha_estado
-	toColumn: LocalDateTable_c3466895-cd0a-438e-972d-0794a4afb927.Date
-
-relationship bceec1bf-0431-420c-9e02-380d65e79953
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Visita.fecha_visita
-	toColumn: LocalDateTable_902f14e5-f7ee-450c-8ea5-2de8f00ecea9.Date
-
-relationship 6dc31b7e-d7bd-4666-a972-5fa2b69633ab
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Encuesta.fecha
-	toColumn: LocalDateTable_621f6514-a43d-4380-a2cc-343b9b58d449.Date
-
-relationship 8e5be9ed-1443-4b93-ab2c-81eafebe162f
+relationship 1d77cefc-ba8e-4d92-a6b2-5985e429efb4
 	joinOnDateBehavior: datePartOnly
 	fromColumn: Cliente.fecha_nacimiento
-	toColumn: LocalDateTable_1496a144-131f-4f52-90ab-63216783ba72.Date
+	toColumn: LocalDateTable_e6b7ccf0-cdd9-42f1-8e6c-ed046563cd22.Date
 
-relationship AutoDetected_cab099c3-433d-4344-ab56-a42c3ead5086
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: Visita.id_reserva
-	toColumn: Reserva.id_reserva
+relationship a01ab0cd-b0e3-40ef-8c5f-df3cd236a34c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Visita.fecha_visita
+	toColumn: LocalDateTable_bbfbf237-f807-4262-a616-7f15e761472f.Date
 
-relationship AutoDetected_542462dc-1ad3-42ed-b6aa-af68591ab4cd
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: Encuesta.id_reserva
-	toColumn: Reserva.id_reserva
+relationship 3575acfe-9399-477d-adb8-ab0324d5996c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Encuesta.fecha
+	toColumn: LocalDateTable_eee8e28d-5ffa-48c3-a118-bdee197a1c46.Date
 
-relationship AutoDetected_a2a68ef4-9dfe-45cb-b88c-104408a23397
+relationship 9679f15d-c263-4902-ba83-a423c1e4f288
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Reserva.check_in
+	toColumn: LocalDateTable_02c2cb13-8bea-484c-ad62-83a773884d9b.Date
+
+relationship b44f15c2-21cd-42bb-9b5d-089ac6934f5b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Reserva.check_out
+	toColumn: LocalDateTable_e0869dc1-9808-431b-b9ef-7f4a05e938a0.Date
+
+relationship b5baa910-1c49-48c3-9fcb-9282ad136178
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Reserva.fecha_estado
+	toColumn: LocalDateTable_60b81e40-4fd4-4fa2-8eac-bd6daf47610f.Date
+
+relationship AutoDetected_8ffb9f67-6c9f-4042-8567-6806f54eac5e
+	fromColumn: Visita.id_cliente
+	toColumn: Cliente.id_cliente
+
+relationship AutoDetected_6b4ece34-108f-45ba-bdcd-ac56c4bd2b88
 	fromColumn: Reserva.id_cliente
 	toColumn: Cliente.id_cliente
 
-relationship AutoDetected_2c803ec6-a061-46b0-87e7-fbd8df32cc66
+relationship AutoDetected_55fa8a57-a94a-4bc3-8ef3-873e8a1a04ec
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Encuesta.id_reserva
+	toColumn: Visita.id_reserva
+
+relationship AutoDetected_d78036db-eeac-4b88-a319-e045aaf3f836
 	isActive: false
-	fromColumn: Visita.id_cliente
-	toColumn: Cliente.id_cliente
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Reserva.id_reserva
+	toColumn: Visita.id_reserva
+
+relationship 975924c3-8bc0-421d-8537-85b1c216e458
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendario.Date
+	toColumn: LocalDateTable_32831f57-3204-43a2-9c96-233eaa2e2dd2.Date
+
+relationship 9d09f6ef-0d92-0b4d-acb3-687d15f86d7c
+	fromColumn: Reserva.fecha_reserva
+	toColumn: Calendario.Date
 

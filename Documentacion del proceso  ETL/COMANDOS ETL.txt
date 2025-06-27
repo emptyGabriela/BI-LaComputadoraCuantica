@@ -67,7 +67,7 @@ WITH NOFORMAT, NOINIT,
 NAME = N'HotelDW-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10;
 
 -- Comando para copiar el .bak fuera del contenedor (Powershell)
-docker cp sql_server_2022:/var/opt/mssql/backup/HotelDW.bak C:\Users\Diego\Desktop\YUESBI18.06.25\HotelDW.bak
+docker cp sql_server_2022:/var/opt/mssql/backup/HotelDW.bak C:\Users\Diego\Desktop\HotelDW.bak
 
 /*  Comandos para restauracion de la base de datos DW */
 

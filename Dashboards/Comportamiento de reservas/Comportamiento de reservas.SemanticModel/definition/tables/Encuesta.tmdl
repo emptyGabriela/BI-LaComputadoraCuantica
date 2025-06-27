@@ -1,10 +1,10 @@
 table Encuesta
-	lineageTag: 22ac77cf-99c7-43cf-ba99-f83aadea6945
+	lineageTag: e024df09-705c-4111-ab44-36dfc17a0282
 
 	column id_encuesta
 		dataType: int64
 		formatString: 0
-		lineageTag: cdd4d89c-7db8-477c-8903-b21a93c70dc2
+		lineageTag: 3174a7b9-758f-46c3-9121-997d7fa4d364
 		summarizeBy: sum
 		sourceColumn: id_encuesta
 
@@ -13,21 +13,21 @@ table Encuesta
 	column fecha
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 81a22ef0-6944-49d2-8371-fad1facbbc7d
+		lineageTag: a36459bb-8be9-420e-b55f-e9b4b7a930f7
 		summarizeBy: none
 		sourceColumn: fecha
 
 		variation Variación
 			isDefault
-			relationship: 6dc31b7e-d7bd-4666-a972-5fa2b69633ab
-			defaultHierarchy: LocalDateTable_621f6514-a43d-4380-a2cc-343b9b58d449.'Jerarquía de fechas'
+			relationship: 3575acfe-9399-477d-adb8-ab0324d5996c
+			defaultHierarchy: LocalDateTable_eee8e28d-5ffa-48c3-a118-bdee197a1c46.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
 	column puntaje
 		dataType: int64
 		formatString: 0
-		lineageTag: 6f177ec1-8629-4724-9867-588f699136e3
+		lineageTag: 517f7539-65e7-4168-8db7-506142a7e1fb
 		summarizeBy: sum
 		sourceColumn: puntaje
 
@@ -35,7 +35,7 @@ table Encuesta
 
 	column comentario
 		dataType: string
-		lineageTag: 3919e918-4cff-456c-9931-5b0484a82069
+		lineageTag: 33452f85-e687-43d8-92a6-7587102ebfe1
 		summarizeBy: none
 		sourceColumn: comentario
 
@@ -44,7 +44,7 @@ table Encuesta
 	column id_reserva
 		dataType: int64
 		formatString: 0
-		lineageTag: ee56bf6e-281f-40c4-b458-d26e1f13be91
+		lineageTag: 78133237-1be1-4438-b6d6-9c9d99a4bad5
 		summarizeBy: none
 		sourceColumn: id_reserva
 
@@ -52,7 +52,7 @@ table Encuesta
 
 	column fuente_encuesta
 		dataType: string
-		lineageTag: 406dabfc-676c-43a2-a646-da8ef7e2bb82
+		lineageTag: 5d689c6e-a71d-4fdd-a7a5-411f1cb42eb9
 		summarizeBy: none
 		sourceColumn: fuente_encuesta
 
@@ -66,8 +66,6 @@ table Encuesta
 				    dbo_Encuesta = Origen{[Schema="dbo",Item="Encuesta"]}[Data]
 				in
 				    dbo_Encuesta
-
-	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
 

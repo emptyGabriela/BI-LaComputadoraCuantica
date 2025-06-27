@@ -1,0 +1,145 @@
+table Medidas
+	lineageTag: 7664ced5-bf52-49ea-b323-c6350067ec58
+
+	measure TotalReservasActivas = ```
+			
+			CALCULATE(
+			    COUNT(Reserva[id_reserva]),
+			    YEAR(Reserva[fecha_reserva]) = YEAR(TODAY()),
+			    Reserva[estado_reserva] = "Check-in"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 03810152-7f5f-4d06-ad7e-74d02219794d
+
+	measure PromedioNochesPorReserva = ```
+			
+			AVERAGEX(
+			    FILTER(
+			        Reserva,
+			        Reserva[estado_reserva] = "Check-in"
+			    ),
+			    DATEDIFF(Reserva[check_in], Reserva[check_out], DAY)
+			)
+			
+			```
+		lineageTag: 356bcb6d-9baa-4a84-93f8-a00ec1ae9472
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalReservasPorFuente = ```
+			
+			CALCULATE(
+			    COUNT(Reserva[id_reserva]),
+			    YEAR(Reserva[fecha_reserva]) = YEAR(TODAY())
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 033a597d-8686-4959-a9b9-57211c2bb428
+
+	measure PromedioVisitasPorCliente = ```
+			
+			AVERAGEX(
+			    VALUES(Visita[id_cliente]),
+			    CALCULATE(COUNT(Visita[id_visita]))
+			)
+			
+			```
+		lineageTag: 7a2c23dd-21d7-43c5-998b-fa59cd7d43cb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PorcentajeSatisfaccionPromedio = ```
+			
+			AVERAGE(Encuesta[puntaje])
+			
+			```
+		lineageTag: 7910ea7c-e19a-41e1-a6ae-62b525493b38
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ClientesNuevos = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Reserva[id_cliente]),
+			    FILTER(
+			        Reserva,
+			        CALCULATE(COUNTROWS(Reserva), ALLEXCEPT(Reserva, Reserva[id_cliente])) = 1
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 10dad83d-cca7-4170-a9d1-1ab691d03ce4
+
+	measure ClientesRecurrentes = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Reserva[id_cliente]),
+			    FILTER(
+			        Reserva,
+			        CALCULATE(COUNTROWS(Reserva), ALLEXCEPT(Reserva, Reserva[id_cliente])) > 1
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 8890796c-87cc-40db-a5d3-922a8ec97f22
+
+	measure PorcentajeClientesNuevos = ```
+			
+			DIVIDE(
+			    [ClientesNuevos],
+			    DISTINCTCOUNT(Reserva[id_cliente]),
+			    0
+			) * 100
+			
+			```
+		lineageTag: f6296806-2980-4c25-933c-3cd3e47e908e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PorcentajeClientesRecurrentes = ```
+			
+			DIVIDE(
+			    [ClientesRecurrentes],
+			    DISTINCTCOUNT(Reserva[id_cliente]),
+			    0
+			) * 100
+			
+			```
+		lineageTag: 550fa987-bf01-4883-8190-8e9a609dd7f3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure TotalReservasPorMes = ```
+			
+			CALCULATE(
+			    COUNTROWS(Reserva),
+			    FILTER(
+			        Reserva,
+			        YEAR(Reserva[fecha_reserva]) = YEAR(TODAY()) &&
+			        MONTH(Reserva[fecha_reserva]) = SELECTEDVALUE(Calendario[Mes])
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: a64df7cc-6d4c-433d-a2d6-3c275f8500b7
+
+	column Value
+		lineageTag: f03342c1-355e-4d20-bf50-ee5e93dfc6b4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = {""}
+
+	annotation PBI_Id = 7ca9ca9fda5b434795defd024a2dce72
+

@@ -1,0 +1,50 @@
+table Calendario
+	lineageTag: 62dcfca1-36ce-456c-83d9-613439bea5e8
+
+	column Date
+		formatString: General Date
+		lineageTag: 99388b79-4398-4a9b-8545-8adcf1662b90
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: 975924c3-8bc0-421d-8537-85b1c216e458
+			defaultHierarchy: LocalDateTable_32831f57-3204-43a2-9c96-233eaa2e2dd2.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		formatString: 0
+		lineageTag: 48305f04-a776-4d0b-b7bd-2dab30b86948
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreMes
+		lineageTag: 1f8663eb-82a2-4579-95a6-046830d4df88
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [NombreMes]
+		sortByColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS(
+				    CALENDAR(DATE(YEAR(TODAY()),1,1), DATE(YEAR(TODAY()),12,31)),
+				    "Mes", MONTH([Date]),
+				    "NombreMes", FORMAT([Date], "MMMM")
+				)
+				
+				
+				```
+
+	annotation PBI_Id = f017bf9b2d9847f1b131d23e7cd631e6
+

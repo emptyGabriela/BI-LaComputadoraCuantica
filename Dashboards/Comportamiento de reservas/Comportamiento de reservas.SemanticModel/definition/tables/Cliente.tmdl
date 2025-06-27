@@ -1,10 +1,10 @@
 table Cliente
-	lineageTag: 9a49ccd7-8c10-4783-bd52-2087c8347d07
+	lineageTag: acd8a556-52ef-4cd6-bb81-07f06011b3f4
 
 	column id_cliente
 		dataType: int64
 		formatString: 0
-		lineageTag: 571e7065-c561-44d6-8001-c04b5aa55e89
+		lineageTag: 67171460-6b19-4fd1-9e2b-53a599e836a5
 		summarizeBy: none
 		sourceColumn: id_cliente
 
@@ -12,7 +12,7 @@ table Cliente
 
 	column nombre
 		dataType: string
-		lineageTag: ec3e4bbd-49a7-4373-9d89-82196d47e58b
+		lineageTag: 87802f91-0d29-4d69-aac5-d18f99eee434
 		summarizeBy: none
 		sourceColumn: nombre
 
@@ -20,23 +20,31 @@ table Cliente
 
 	column apellido
 		dataType: string
-		lineageTag: 42266f4c-5ea6-4aa2-8c3a-6b39ce2c21b6
+		lineageTag: d976a3a1-15c6-4d9f-97af-2a789bf9544b
 		summarizeBy: none
 		sourceColumn: apellido
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 0cf34103-bdb7-4e12-94e1-a1af5baa9a36
+		summarizeBy: none
+		sourceColumn: email
 
 		annotation SummarizationSetBy = Automatic
 
 	column fecha_nacimiento
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 77aa56ca-2cb2-41c1-be61-30892a1198d1
+		lineageTag: 3ecf7893-1b6b-4507-972c-7c58c23ab5f5
 		summarizeBy: none
 		sourceColumn: fecha_nacimiento
 
 		variation Variación
 			isDefault
-			relationship: 8e5be9ed-1443-4b93-ab2c-81eafebe162f
-			defaultHierarchy: LocalDateTable_1496a144-131f-4f52-90ab-63216783ba72.'Jerarquía de fechas'
+			relationship: 1d77cefc-ba8e-4d92-a6b2-5985e429efb4
+			defaultHierarchy: LocalDateTable_e6b7ccf0-cdd9-42f1-8e6c-ed046563cd22.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -44,7 +52,7 @@ table Cliente
 
 	column genero
 		dataType: string
-		lineageTag: 446c20f7-8fb1-4625-bbab-4157b257a2cb
+		lineageTag: 6f275bb0-254a-4457-a359-f549e7ff852c
 		summarizeBy: none
 		sourceColumn: genero
 
@@ -52,7 +60,7 @@ table Cliente
 
 	column nacionalidad
 		dataType: string
-		lineageTag: 54d175f9-48e6-49f7-b19b-d90d4d0c2584
+		lineageTag: a306580f-a194-408f-ae81-2fe3a8c69d38
 		summarizeBy: none
 		sourceColumn: nacionalidad
 
@@ -63,12 +71,9 @@ table Cliente
 		source =
 				let
 				    Origen = Sql.Database("localhost,1433", "HotelDW"),
-				    dbo_Cliente = Origen{[Schema="dbo",Item="Cliente"]}[Data],
-				    #"Columnas quitadas" = Table.RemoveColumns(dbo_Cliente,{"email"})
+				    dbo_Cliente = Origen{[Schema="dbo",Item="Cliente"]}[Data]
 				in
-				    #"Columnas quitadas"
-
-	annotation PBI_NavigationStepName = Navegación
+				    dbo_Cliente
 
 	annotation PBI_ResultType = Table
 

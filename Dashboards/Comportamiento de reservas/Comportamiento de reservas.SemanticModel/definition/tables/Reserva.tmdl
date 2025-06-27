@@ -1,11 +1,11 @@
 table Reserva
-	lineageTag: ca682575-d3f5-49bc-9242-945b22ac5960
+	lineageTag: e19546e5-f3ff-4c91-b1e6-cb3c06d18a45
 
 	column id_reserva
 		dataType: int64
 		formatString: 0
-		lineageTag: fa606763-102a-4f98-9dd2-71ad2f730226
-		summarizeBy: none
+		lineageTag: 895b976f-0b40-4522-b854-3c22dcb419bd
+		summarizeBy: sum
 		sourceColumn: id_reserva
 
 		annotation SummarizationSetBy = Automatic
@@ -13,28 +13,23 @@ table Reserva
 	column fecha_reserva
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 7b952561-7652-4c26-a35a-edb48b83e7ee
+		lineageTag: aaf3085e-de1b-4789-9543-6d9d6afa8aa1
 		summarizeBy: none
 		sourceColumn: fecha_reserva
-
-		variation Variación
-			isDefault
-			relationship: 193ca79a-71d1-4fa7-9ee2-4e1b650594c4
-			defaultHierarchy: LocalDateTable_75bbafb5-1612-4945-bf50-40dfbe07ed3f.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
 	column check_in
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 449434a1-6f7d-433b-b720-4265b117c99c
+		lineageTag: f7eec456-ef8c-44d1-9c19-4bfc9c0ba7de
 		summarizeBy: none
 		sourceColumn: check_in
 
 		variation Variación
 			isDefault
-			relationship: 5dd29ff4-e116-4c13-a9ac-09f4ccedb2eb
-			defaultHierarchy: LocalDateTable_e0e3809c-8bff-41fa-8e51-7cc0bbede867.'Jerarquía de fechas'
+			relationship: 9679f15d-c263-4902-ba83-a423c1e4f288
+			defaultHierarchy: LocalDateTable_02c2cb13-8bea-484c-ad62-83a773884d9b.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -43,14 +38,14 @@ table Reserva
 	column check_out
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: ad6d6a68-2bce-4e51-92b5-564c6d550eda
+		lineageTag: 51ce31c2-e9e6-43f9-bc31-6f75f6421f83
 		summarizeBy: none
 		sourceColumn: check_out
 
 		variation Variación
 			isDefault
-			relationship: 55b41993-7ede-43ed-a5eb-4265c6c6636e
-			defaultHierarchy: LocalDateTable_b6a7d4ef-11ea-4440-b055-33e5df70b63e.'Jerarquía de fechas'
+			relationship: b44f15c2-21cd-42bb-9b5d-089ac6934f5b
+			defaultHierarchy: LocalDateTable_e0869dc1-9808-431b-b9ef-7f4a05e938a0.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -59,7 +54,7 @@ table Reserva
 	column id_cliente
 		dataType: int64
 		formatString: 0
-		lineageTag: 49cd8f98-b821-4c79-b9af-eb8d1daf1ad9
+		lineageTag: c0431313-61f2-4dc9-90a4-4a0561a5dd1a
 		summarizeBy: none
 		sourceColumn: id_cliente
 
@@ -67,7 +62,7 @@ table Reserva
 
 	column cliente_nombre
 		dataType: string
-		lineageTag: 58fc133e-8dd9-46be-b18d-751c6a391405
+		lineageTag: da730299-9bcb-41f4-98b2-108bb9bf003e
 		summarizeBy: none
 		sourceColumn: cliente_nombre
 
@@ -76,7 +71,7 @@ table Reserva
 	column id_habitacion
 		dataType: int64
 		formatString: 0
-		lineageTag: 9aee1473-626c-4005-9a8b-fbc99da0479c
+		lineageTag: 01a84704-f919-4ca7-87b6-8713c9c12d8c
 		summarizeBy: sum
 		sourceColumn: id_habitacion
 
@@ -84,7 +79,7 @@ table Reserva
 
 	column habitacion_numero
 		dataType: string
-		lineageTag: 76d230e5-b44e-44e4-8ea6-e957e3f53c8d
+		lineageTag: 8a29499a-cb1d-4ecb-9a64-1f287e99373c
 		summarizeBy: none
 		sourceColumn: habitacion_numero
 
@@ -92,7 +87,7 @@ table Reserva
 
 	column fuente_reserva
 		dataType: string
-		lineageTag: 23610c50-fdd7-46fc-b07e-addb8edf794b
+		lineageTag: 51ecbb01-a987-403b-88d6-c6a2dcc66942
 		summarizeBy: none
 		sourceColumn: fuente_reserva
 
@@ -100,7 +95,7 @@ table Reserva
 
 	column estado_reserva
 		dataType: string
-		lineageTag: 1192392e-7cdb-43c3-89fd-9c92d96d4b92
+		lineageTag: 16f509ea-57f8-4522-81cb-a92235c3cd9e
 		summarizeBy: none
 		sourceColumn: estado_reserva
 
@@ -109,14 +104,14 @@ table Reserva
 	column fecha_estado
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 22bc4adc-d253-479a-a264-0ec4118dce22
+		lineageTag: e336773a-f604-4912-ac2c-1e98c78a0f94
 		summarizeBy: none
 		sourceColumn: fecha_estado
 
 		variation Variación
 			isDefault
-			relationship: ab3bcb06-fd7e-4928-8f6e-314fad63f0df
-			defaultHierarchy: LocalDateTable_c3466895-cd0a-438e-972d-0794a4afb927.'Jerarquía de fechas'
+			relationship: b5baa910-1c49-48c3-9fcb-9282ad136178
+			defaultHierarchy: LocalDateTable_60b81e40-4fd4-4fa2-8eac-bd6daf47610f.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -128,8 +123,6 @@ table Reserva
 				    dbo_Reserva = Origen{[Schema="dbo",Item="Reserva"]}[Data]
 				in
 				    dbo_Reserva
-
-	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
 
