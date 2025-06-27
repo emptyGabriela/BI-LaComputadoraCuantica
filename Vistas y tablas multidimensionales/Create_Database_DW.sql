@@ -1,4 +1,5 @@
 CREATE DATABASE HotelDW
+GO
 USE HotelDW
 GO
 
