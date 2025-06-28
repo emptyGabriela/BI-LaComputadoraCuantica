@@ -3,7 +3,7 @@
 -- Comando para instalar sql server en docker 
 docker run -d `
   -e "ACCEPT_EULA=Y" `
-  -e "SA_PASSWORD=ClaveSecreta" `
+  -e "SA_PASSWORD=Admin2002" `
   -v C:\sqlserver_data:/repo_data `
   -p 1433:1433 `
   --name sql_server_2022 `
@@ -74,16 +74,16 @@ docker cp sql_server_2022:/var/opt/mssql/backup/HotelDW.bak C:\Users\Diego\Deskt
 -- Colocar el archivo .bak en la carpeta C:\sqlserver_data
 
 -- Ejecutar en el EXEC de Docker
-cp /repo_data/HotelOLTP.bak /var/opt/mssql/data/
+cp /repo_data/HotelDW.bak /var/opt/mssql/data/
 
 -- Ejecutar este comando desde Azure Data Studio
-RESTORE DATABASE HotelOLTP
-FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak'
+RESTORE DATABASE HotelDW
+FROM DISK = '/var/opt/mssql/data/HotelDW.bak'
 WITH
-    MOVE 'HotelOLTP' TO '/var/opt/mssql/data/HotelOLTP.mdf',
-    MOVE 'HotelOLTP_Log' TO '/var/opt/mssql/data/HotelOLTP_log.ldf',
+    MOVE 'HotelDW' TO '/var/opt/mssql/data/HotelDW.mdf',
+    MOVE 'HotelDW_Log' TO '/var/opt/mssql/data/HotelDW_log.ldf',
     FILE = 1,
     NOUNLOAD,
     STATS = 5;
 
-RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/data/HotelOLTP.bak';
+RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/data/HotelDW.bak';
