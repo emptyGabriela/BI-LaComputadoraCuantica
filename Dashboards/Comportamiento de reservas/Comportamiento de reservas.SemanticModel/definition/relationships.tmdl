@@ -58,3 +58,31 @@ relationship 9d09f6ef-0d92-0b4d-acb3-687d15f86d7c
 	fromColumn: Reserva.fecha_reserva
 	toColumn: Calendario.Date
 
+relationship 6e4be080-d755-404d-875f-14e306ecd157
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Pago.fecha_pago
+	toColumn: LocalDateTable_d9c909e6-1610-4a4a-8bf0-3a9f6a8b3c14.Date
+
+relationship 76b55abc-a866-483f-9b44-7c2056c84ac3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Pago.fecha_estado
+	toColumn: LocalDateTable_409b4d8a-f1c6-43d4-bf67-258543fc40bc.Date
+
+relationship AutoDetected_99b60965-f184-46a8-a11a-14bce110fa8b
+	fromColumn: Pago.id_cliente
+	toColumn: Cliente.id_cliente
+
+relationship AutoDetected_027374aa-30cb-4712-bd1c-2bec3091915c
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Pago.id_reserva
+	toColumn: Reserva.id_reserva
+
+relationship AutoDetected_f7d04c77-149b-4122-add4-56d8dbb46e69
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Pago.id_reserva
+	toColumn: Visita.id_reserva
+

@@ -136,12 +136,120 @@ table Medidas
 		formatString: 0
 		lineageTag: a64df7cc-6d4c-433d-a2d6-3c275f8500b7
 
-	measure TotalReservas = ```
-			COUNT(Reserva[id_reserva])
+	measure TotalReservasAñoActual = ```
+			
+			CALCULATE (
+			    COUNT ( Reserva[id_reserva] ),
+			    YEAR ( Reserva[fecha_reserva] ) = YEAR ( TODAY() )
+			)
 			
 			```
 		formatString: 0
 		lineageTag: b7a46c50-2d95-4b68-82f8-248127fc5a54
+
+	measure ReservasEsteAño = ```
+			
+			CALCULATE (
+			    COUNT ( Reserva[id_reserva] ),
+			    YEAR ( Reserva[fecha_reserva] ) = YEAR ( TODAY() )
+			)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 3df37795-70cd-4a52-a800-17226cbb84be
+
+	measure CanceladasEsteAño = ```
+			
+			CALCULATE (
+			    COUNT ( Reserva[id_reserva] ),
+			    Reserva[estado_reserva] = "Cancelada",
+			    YEAR ( Reserva[fecha_reserva] ) = YEAR ( TODAY() )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 5d521085-7887-4a66-bf6f-da21690de2a9
+
+	measure TasaCancelaciones% = ```
+			
+			DIVIDE ( [CanceladasEsteAño], [ReservasEsteAño], 0 ) * 100
+			
+			```
+		lineageTag: 039fbb5c-0f59-4747-aec2-cd4bc5b03da6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure DuracionMediaPorFuente = ```
+			
+			AVERAGEX (
+			    Reserva,
+			    DATEDIFF ( Reserva[check_in], Reserva[check_out], DAY )
+			)
+			
+			```
+		lineageTag: 63796019-7aa6-46de-93a0-e0cc0c497603
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure DuracionMediaPorFuenteAñoActual = ```
+			
+			CALCULATE (
+			    [DuracionMediaPorFuente],
+			    YEAR ( Reserva[fecha_reserva] ) = YEAR ( TODAY() )
+			)
+			
+			```
+		lineageTag: 58ebc3f0-42fa-48f7-9f84-cd568604b377
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ReservasAño =
+			
+			CALCULATE (
+			    COUNT ( Reserva[id_reserva] ),
+			    YEAR ( Reserva[fecha_reserva] ) = YEAR ( TODAY() )
+			)
+		formatString: 0
+		lineageTag: ec8a7ad1-540e-41cc-99d3-7f827b3d2da1
+
+	measure PagosAño = ```
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( 'pago'[id_reserva] ),
+			    FILTER (
+			        'Pago',
+			        YEAR ( 'Pago'[fecha_pago] ) = YEAR ( TODAY() )
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: e66b4d6e-ea5c-488f-9923-5eb834828bf0
+
+	measure CheckInAño =
+			
+			CALCULATE (
+			    COUNT ( Reserva[id_reserva] ),
+			    Reserva[estado_reserva] = "Check-in",
+			    YEAR ( Reserva[fecha_reserva] ) = YEAR ( TODAY() )
+			)
+		formatString: 0
+		lineageTag: 18a0e335-b773-4979-bb1e-905c9582c38a
+
+	measure PromedioSatisfaccionPorFuente = ```
+			
+			ROUND (
+			    AVERAGEX (
+			        Encuesta,            
+			        Encuesta[puntaje]   
+			    ),
+			    2                       
+			)
+			```
+		lineageTag: c6046ffa-09e2-4df6-bfdc-5b546cfded64
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Value
 		lineageTag: f03342c1-355e-4d20-bf50-ee5e93dfc6b4

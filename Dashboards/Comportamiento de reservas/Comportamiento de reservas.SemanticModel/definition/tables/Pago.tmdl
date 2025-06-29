@@ -1,0 +1,95 @@
+table Pago
+	lineageTag: fbe3c05d-f70e-40c5-99bd-6c7bea18f06a
+
+	column id_pago
+		dataType: int64
+		formatString: 0
+		lineageTag: 1bcf3d79-401e-4a5f-8fe2-844a5b78d67c
+		summarizeBy: sum
+		sourceColumn: id_pago
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_pago
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dd11f2f4-9ab3-4dcf-a522-5e2d958036eb
+		summarizeBy: none
+		sourceColumn: fecha_pago
+
+		variation Variación
+			isDefault
+			relationship: 6e4be080-d755-404d-875f-14e306ecd157
+			defaultHierarchy: LocalDateTable_d9c909e6-1610-4a4a-8bf0-3a9f6a8b3c14.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column monto
+		dataType: double
+		lineageTag: 85f4d667-02ce-4753-85d9-3f1d36d32d25
+		summarizeBy: sum
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column metodo_pago
+		dataType: string
+		lineageTag: 04140bb6-75c8-4ef5-a0a0-e1d2aa53d16d
+		summarizeBy: none
+		sourceColumn: metodo_pago
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_reserva
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d96b79d-359f-4e58-97fc-13d33db0fb1e
+		summarizeBy: sum
+		sourceColumn: id_reserva
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fb06241-70c9-406b-85d1-8f08c721ccf7
+		summarizeBy: none
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_pago
+		dataType: string
+		lineageTag: 12c12755-8ed4-4ba4-9fb8-15117e9cc659
+		summarizeBy: none
+		sourceColumn: estado_pago
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_estado
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3cb090d8-9166-4ad8-8c17-fb3636e5d1f8
+		summarizeBy: none
+		sourceColumn: fecha_estado
+
+		variation Variación
+			isDefault
+			relationship: 76b55abc-a866-483f-9b44-7c2056c84ac3
+			defaultHierarchy: LocalDateTable_409b4d8a-f1c6-43d4-bf67-258543fc40bc.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Pago = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("localhost,1433", "HotelDW"),
+				    dbo_Pago = Origen{[Schema="dbo",Item="Pago"]}[Data]
+				in
+				    dbo_Pago
+
