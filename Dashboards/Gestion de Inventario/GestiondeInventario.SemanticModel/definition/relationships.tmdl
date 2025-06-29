@@ -1,0 +1,115 @@
+relationship 3c8117c3-9920-4b7a-9cda-c49f003382ce
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Tarea.fecha_asignacion
+	toColumn: LocalDateTable_c60397cf-53e1-4025-9f1e-698e7edb7f85.Date
+
+relationship dddf0e65-0efc-40dd-b2ec-f421f402b415
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Visita.fecha_visita
+	toColumn: LocalDateTable_ef5a938c-2800-4a19-8208-806b35da1c56.Date
+
+relationship 9eb9668c-7f8f-4d54-bcc9-589df6d5eb54
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cliente.fecha_nacimiento
+	toColumn: LocalDateTable_f17f7547-1f81-4124-acb4-73c294c262e3.Date
+
+relationship 5626a573-17c8-492f-9d92-4350010f97b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Empleado.fecha_asignacion
+	toColumn: LocalDateTable_5cafcf08-ed6f-498e-8179-c85565d5b0bd.Date
+
+relationship bcfdbeff-a1eb-4460-aea1-732ccddd8dfb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Encuesta.fecha
+	toColumn: LocalDateTable_11736e67-86d3-4121-9baf-5955aaeda09b.Date
+
+relationship 587b6fec-c68f-4e7d-894d-8e72d60ce556
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Habitacion.fecha_estado
+	toColumn: LocalDateTable_79e4fd8b-4c7b-439d-ba5e-b88a5ecb62e6.Date
+
+relationship 39ba3564-3ffa-4c2e-a7e9-7e5f6002e05d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Mantenimiento.fecha_inicio
+	toColumn: LocalDateTable_789fa570-8a87-4847-8aab-ba9186d772f3.Date
+
+relationship 427faac9-c7a9-41fc-95c7-89cce0d7ab64
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Mantenimiento.fecha_fin
+	toColumn: LocalDateTable_78673815-e6dd-423d-889a-5e2a977006f7.Date
+
+relationship 6165b1dc-71c5-4a84-bbb2-16f8e0959a6d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Pago.fecha_pago
+	toColumn: LocalDateTable_6b9950df-eb11-4ec6-8523-1539a62889d2.Date
+
+relationship e5cb2db4-3b5e-4ba3-af87-2fdbb2881d68
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Pago.fecha_estado
+	toColumn: LocalDateTable_c404b8c6-0434-471f-b945-57ad12ccf828.Date
+
+relationship 27520b43-542a-41c0-9dcd-20565575bb6d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: MovimientoInventario.fecha
+	toColumn: LocalDateTable_75116e43-2484-4ee7-85ac-bda1955542a9.Date
+
+relationship d98e25a4-df88-4ec7-90db-f5a1d67b04ad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Reserva.fecha_reserva
+	toColumn: LocalDateTable_2270845b-ee77-440d-a422-b5e273abf2e5.Date
+
+relationship 7ab7a78d-4e0a-457e-8e9a-50301d8ac4b3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Reserva.check_in
+	toColumn: LocalDateTable_b4273e38-7e98-498c-b93f-3906959e7d3b.Date
+
+relationship 92fe8bf0-e5ad-4263-a9d0-5f4aaa593014
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Reserva.check_out
+	toColumn: LocalDateTable_da57ca2b-5eb3-4a5b-980a-89ebda7e7f58.Date
+
+relationship a4b397ed-fdd5-49ed-98a5-4b3822667f9c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Reserva.fecha_estado
+	toColumn: LocalDateTable_8d64192f-30df-415e-b4c9-f46ee23a40f0.Date
+
+relationship AutoDetected_6606f8da-943a-4949-ab1e-4654dccf2842
+	fromColumn: Tarea.id_empleado
+	toColumn: Empleado.id_empleado
+
+relationship AutoDetected_cd7dcc70-c16c-44c3-b128-48d473885abb
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Visita.id_reserva
+	toColumn: Pago.id_reserva
+
+relationship AutoDetected_81d75fe5-7a68-430b-b921-a7ce31939c72
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Encuesta.id_reserva
+	toColumn: Pago.id_reserva
+
+relationship AutoDetected_4245684d-1202-4f8c-b199-e10661690be8
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Reserva.id_reserva
+	toColumn: Pago.id_reserva
+
+relationship AutoDetected_42347171-241b-4ec9-a920-65c8e0313bb7
+	fromColumn: Visita.id_cliente
+	toColumn: Cliente.id_cliente
+
+relationship AutoDetected_1f1bfafd-15c0-4fd2-b28c-f60108f60449
+	isActive: false
+	fromColumn: Pago.id_cliente
+	toColumn: Cliente.id_cliente
+
+relationship AutoDetected_7ad32637-bc0e-4e97-b165-049b125173a4
+	isActive: false
+	fromColumn: Reserva.id_cliente
+	toColumn: Cliente.id_cliente
+
+relationship AutoDetected_3e2737b6-2b6a-4aa2-b55b-08b60db8245d
+	fromColumn: Reserva.id_habitacion
+	toColumn: Habitacion.id_habitacion
+

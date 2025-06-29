@@ -1,0 +1,81 @@
+table Mantenimiento
+	lineageTag: dd48f881-7c30-4d2d-90d5-2f802bb122d4
+
+	column id_mantenimiento
+		dataType: int64
+		formatString: 0
+		lineageTag: d274041e-b3c9-4686-aa26-cfee3171e9e1
+		summarizeBy: sum
+		sourceColumn: id_mantenimiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_inicio
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0c41360b-1b20-4a4f-9319-104f24e6b87f
+		summarizeBy: none
+		sourceColumn: fecha_inicio
+
+		variation Variación
+			isDefault
+			relationship: 39ba3564-3ffa-4c2e-a7e9-7e5f6002e05d
+			defaultHierarchy: LocalDateTable_789fa570-8a87-4847-8aab-ba9186d772f3.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_fin
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8db06649-b347-4cfe-a986-3a321e07ae06
+		summarizeBy: none
+		sourceColumn: fecha_fin
+
+		variation Variación
+			isDefault
+			relationship: 427faac9-c7a9-41fc-95c7-89cce0d7ab64
+			defaultHierarchy: LocalDateTable_78673815-e6dd-423d-889a-5e2a977006f7.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column descripcion
+		dataType: string
+		lineageTag: 1e65dda4-9e9c-45df-aa0d-66f2585e76ff
+		summarizeBy: none
+		sourceColumn: descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo
+		dataType: double
+		lineageTag: bd70f608-bb66-4e6b-a7ae-90a3581919fd
+		summarizeBy: sum
+		sourceColumn: costo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column habitacion_numero
+		dataType: string
+		lineageTag: 605736c8-9d1e-4796-b956-173852744b99
+		summarizeBy: none
+		sourceColumn: habitacion_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mantenimiento = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("172.25.224.1", "HotelDW"),
+				    dbo_Mantenimiento = Origen{[Schema="dbo",Item="Mantenimiento"]}[Data]
+				in
+				    dbo_Mantenimiento
+
+	annotation PBI_ResultType = Table
+
