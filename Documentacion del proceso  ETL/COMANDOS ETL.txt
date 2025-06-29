@@ -87,3 +87,8 @@ WITH
     STATS = 5;
 
 RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/data/HotelDW.bak';
+
+-- Update para subir rating 
+UPDATE dbo.Encuesta
+SET puntaje = puntaje + 2.5
+WHERE puntaje < 8;

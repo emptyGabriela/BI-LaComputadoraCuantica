@@ -27,76 +27,76 @@
       "name": "b8278756b0ce1306d2a7",
       "visualContainers": [
         {
-          "config": "{\"name\":\"0aec504dc38c322bb988\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1001.5819209039548,\"y\":25.310734463276837,\"z\":3000,\"width\":278.41807909604523,\"height\":148.24858757062148,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PromedioNochesPorReserva\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioNochesPorReserva\"},\"Name\":\"Medidas.PromedioNochesPorReserva\",\"NativeReferenceName\":\"PromedioNochesPorReserva\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioNochesPorReserva\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"0278386a00c1ac849ad9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":60,\"y\":512.2222222222222,\"z\":7000,\"width\":401.1111111111111,\"height\":197.77777777777777,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Reserva.estado_reserva\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.TotalReservas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"Reserva\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"estado_reserva\"},\"Name\":\"Reserva.estado_reserva\",\"NativeReferenceName\":\"estado_reserva\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservas\"},\"Name\":\"Medidas.TotalReservas\",\"NativeReferenceName\":\"TotalReservas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 197.78,
+          "width": 401.11,
+          "x": 60.00,
+          "y": 512.22,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"0aec504dc38c322bb988\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1001.5819209039548,\"y\":25.310734463276837,\"z\":2000,\"width\":278.41807909604523,\"height\":148.24858757062148,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PromedioNochesPorReserva\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioNochesPorReserva\"},\"Name\":\"Medidas.PromedioNochesPorReserva\",\"NativeReferenceName\":\"PromedioNochesPorReserva\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioNochesPorReserva\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 148.25,
           "width": 278.42,
           "x": 1001.58,
           "y": 25.31,
-          "z": 3000.00
+          "z": 2000.00
         },
         {
-          "config": "{\"name\":\"48791bc792a850650640\",\"layouts\":[{\"id\":0,\"position\":{\"x\":234.40729483282675,\"y\":0,\"z\":1000,\"width\":279.1489361702128,\"height\":282.0668693009119,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.ClientesRecurrentes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesRecurrentes\"},\"Name\":\"Medidas.ClientesRecurrentes\",\"NativeReferenceName\":\"ClientesRecurrentes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesRecurrentes\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
-          "filters": "[]",
-          "height": 282.07,
-          "width": 279.15,
-          "x": 234.41,
-          "y": 0.00,
-          "z": 1000.00
-        },
-        {
-          "config": "{\"name\":\"b25c5e654a494d3dd46b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":748.936170212766,\"y\":25.288753799392097,\"z\":4000,\"width\":278.17629179331306,\"height\":148.8145896656535,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PromedioVisitasPorCliente\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioVisitasPorCliente\"},\"Name\":\"Medidas.PromedioVisitasPorCliente\",\"NativeReferenceName\":\"PromedioVisitasPorCliente\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioVisitasPorCliente\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"b25c5e654a494d3dd46b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":748.936170212766,\"y\":25.288753799392097,\"z\":3000,\"width\":278.17629179331306,\"height\":148.8145896656535,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PromedioVisitasPorCliente\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioVisitasPorCliente\"},\"Name\":\"Medidas.PromedioVisitasPorCliente\",\"NativeReferenceName\":\"PromedioVisitasPorCliente\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PromedioVisitasPorCliente\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 148.81,
           "width": 278.18,
           "x": 748.94,
           "y": 25.29,
-          "z": 4000.00
+          "z": 3000.00
         },
         {
-          "config": "{\"name\":\"b3d7a5acaa0ba1aa41e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":279.1489361702128,\"height\":278.17629179331306,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.ClientesNuevos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesNuevos\"},\"Name\":\"Medidas.ClientesNuevos\",\"NativeReferenceName\":\"ClientesNuevos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesNuevos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"b3d7a5acaa0ba1aa41e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":46.68693009118541,\"y\":0,\"z\":0,\"width\":279.1489361702128,\"height\":278.17629179331306,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.ClientesNuevos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesNuevosEsteAño\"},\"Name\":\"Medidas.ClientesNuevos\",\"NativeReferenceName\":\"ClientesNuevosEsteAño\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ClientesNuevosEsteAño\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 278.18,
           "width": 279.15,
-          "x": 0.00,
+          "x": 46.69,
           "y": 0.00,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"b8c5268d1d542726be40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":662.5,\"y\":343.75,\"z\":7000,\"width\":365,\"height\":238.75,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Calendario.NombreMes\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.TotalReservasPorMes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendario\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NombreMes\"},\"Name\":\"Calendario.NombreMes\",\"NativeReferenceName\":\"NombreMes\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorMes\"},\"Name\":\"Medidas.TotalReservasPorMes\",\"NativeReferenceName\":\"TotalReservasPorMes1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "config": "{\"name\":\"b8c5268d1d542726be40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":541.7629179331307,\"y\":290.8206686930091,\"z\":6000,\"width\":364.74164133738606,\"height\":239.27051671732525,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Calendario.NombreMes\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.TotalReservasPorMes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendario\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NombreMes\"},\"Name\":\"Calendario.NombreMes\",\"NativeReferenceName\":\"NombreMes\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorMes\"},\"Name\":\"Medidas.TotalReservasPorMes\",\"NativeReferenceName\":\"TotalReservasPorMes1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
           "filters": "[]",
-          "height": 238.75,
-          "width": 365.00,
-          "x": 662.50,
-          "y": 343.75,
-          "z": 7000.00
+          "height": 239.27,
+          "width": 364.74,
+          "x": 541.76,
+          "y": 290.82,
+          "z": 6000.00
         },
         {
-          "config": "{\"name\":\"dcbbfcb74ac6571407b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":477.5683890577508,\"y\":0,\"z\":2000,\"width\":278.17629179331306,\"height\":278.17629179331306,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PorcentajeSatisfaccionPromedio\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PorcentajeSatisfaccionPromedio\"},\"Name\":\"Medidas.PorcentajeSatisfaccionPromedio\",\"NativeReferenceName\":\"PorcentajeSatisfaccionPromedio\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PorcentajeSatisfaccionPromedio\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"dcbbfcb74ac6571407b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":477.5683890577508,\"y\":0,\"z\":1000,\"width\":278.17629179331306,\"height\":278.17629179331306,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.PorcentajeSatisfaccionPromedio\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PorcentajeSatisfaccionPromedio\"},\"Name\":\"Medidas.PorcentajeSatisfaccionPromedio\",\"NativeReferenceName\":\"PorcentajeSatisfaccionPromedio\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"PorcentajeSatisfaccionPromedio\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 278.18,
           "width": 278.18,
           "x": 477.57,
           "y": 0.00,
-          "z": 2000.00
+          "z": 1000.00
         },
         {
-          "config": "{\"name\":\"e04b061fbb407ba244d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1001.823708206687,\"y\":173.13069908814592,\"z\":5000,\"width\":278.17629179331306,\"height\":147.8419452887538,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.TotalReservasActivas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasActivas\"},\"Name\":\"Medidas.TotalReservasActivas\",\"NativeReferenceName\":\"TotalReservasActivas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasActivas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"e04b061fbb407ba244d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1001.823708206687,\"y\":173.13069908814592,\"z\":4000,\"width\":278.17629179331306,\"height\":147.8419452887538,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.TotalReservasActivas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasActivas\"},\"Name\":\"Medidas.TotalReservasActivas\",\"NativeReferenceName\":\"TotalReservasActivas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasActivas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 147.84,
           "width": 278.18,
           "x": 1001.82,
           "y": 173.13,
-          "z": 5000.00
+          "z": 4000.00
         },
         {
-          "config": "{\"name\":\"fff7472ed15d7e928a0a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":41.82370820668693,\"y\":299.5744680851064,\"z\":6000,\"width\":286.93009118541033,\"height\":185.77507598784194,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Reserva.fuente_reserva\"},{\"queryRef\":\"Medidas.TotalReservasPorFuente\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"Reserva\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fuente_reserva\"},\"Name\":\"Reserva.fuente_reserva\",\"NativeReferenceName\":\"fuente_reserva\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorFuente\"},\"Name\":\"Medidas.TotalReservasPorFuente\",\"NativeReferenceName\":\"TotalReservasPorFuente\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorFuente\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{}}]}}}",
+          "config": "{\"name\":\"fff7472ed15d7e928a0a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.480243161094226,\"y\":290.8206686930091,\"z\":5000,\"width\":400.7294832826748,\"height\":220.790273556231,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Reserva.fuente_reserva\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.TotalReservasPorFuente\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"Reserva\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fuente_reserva\"},\"Name\":\"Reserva.fuente_reserva\",\"NativeReferenceName\":\"fuente_reserva\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorFuente\"},\"Name\":\"Medidas.TotalReservasPorFuente\",\"NativeReferenceName\":\"TotalReservasPorFuente\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"TotalReservasPorFuente\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{}}]}}}",
           "filters": "[]",
-          "height": 185.78,
-          "width": 286.93,
-          "x": 41.82,
-          "y": 299.57,
-          "z": 6000.00
+          "height": 220.79,
+          "width": 400.73,
+          "x": 18.48,
+          "y": 290.82,
+          "z": 5000.00
         }
       ],
       "width": 1280.00

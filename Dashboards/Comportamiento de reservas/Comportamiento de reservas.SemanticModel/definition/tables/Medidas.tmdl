@@ -60,15 +60,22 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure ClientesNuevos = ```
+	measure ClientesNuevosEsteAño = ```
 			
 			CALCULATE(
 			    DISTINCTCOUNT(Reserva[id_cliente]),
 			    FILTER(
 			        Reserva,
-			        CALCULATE(COUNTROWS(Reserva), ALLEXCEPT(Reserva, Reserva[id_cliente])) = 1
-			    )
+			        CALCULATE(
+			            COUNTROWS(Reserva),
+			            ALLEXCEPT(Reserva, Reserva[id_cliente])
+			        ) = 1
+			    ),
+			    YEAR(Calendario[Date]) = YEAR(TODAY())
 			)
+			
+			
+			
 			
 			```
 		formatString: 0
@@ -91,7 +98,7 @@ table Medidas
 	measure PorcentajeClientesNuevos = ```
 			
 			DIVIDE(
-			    [ClientesNuevos],
+			    [ClientesNuevosEsteAño],
 			    DISTINCTCOUNT(Reserva[id_cliente]),
 			    0
 			) * 100
@@ -128,6 +135,13 @@ table Medidas
 			```
 		formatString: 0
 		lineageTag: a64df7cc-6d4c-433d-a2d6-3c275f8500b7
+
+	measure TotalReservas = ```
+			COUNT(Reserva[id_reserva])
+			
+			```
+		formatString: 0
+		lineageTag: b7a46c50-2d95-4b68-82f8-248127fc5a54
 
 	column Value
 		lineageTag: f03342c1-355e-4d20-bf50-ee5e93dfc6b4
