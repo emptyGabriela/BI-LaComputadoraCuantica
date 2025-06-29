@@ -1,0 +1,47 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Tarea","Visita","Cliente","Empleado","Encuesta","Habitacion","Mantenimiento","Pago","MovimientoInventario","Producto","Reserva"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.144.1155.0 (25.06)+46435b07013d2a234d7fd007083a9e70b8e79f1c
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Tarea
+ref table DateTableTemplate_3c760864-5738-4a1b-a9bd-321b51f93853
+ref table LocalDateTable_c60397cf-53e1-4025-9f1e-698e7edb7f85
+ref table Visita
+ref table LocalDateTable_ef5a938c-2800-4a19-8208-806b35da1c56
+ref table Cliente
+ref table LocalDateTable_f17f7547-1f81-4124-acb4-73c294c262e3
+ref table Empleado
+ref table LocalDateTable_5cafcf08-ed6f-498e-8179-c85565d5b0bd
+ref table Encuesta
+ref table LocalDateTable_11736e67-86d3-4121-9baf-5955aaeda09b
+ref table Habitacion
+ref table LocalDateTable_79e4fd8b-4c7b-439d-ba5e-b88a5ecb62e6
+ref table Mantenimiento
+ref table LocalDateTable_789fa570-8a87-4847-8aab-ba9186d772f3
+ref table LocalDateTable_78673815-e6dd-423d-889a-5e2a977006f7
+ref table Pago
+ref table LocalDateTable_6b9950df-eb11-4ec6-8523-1539a62889d2
+ref table LocalDateTable_c404b8c6-0434-471f-b945-57ad12ccf828
+ref table MovimientoInventario
+ref table LocalDateTable_75116e43-2484-4ee7-85ac-bda1955542a9
+ref table Producto
+ref table Reserva
+ref table LocalDateTable_2270845b-ee77-440d-a422-b5e273abf2e5
+ref table LocalDateTable_b4273e38-7e98-498c-b93f-3906959e7d3b
+ref table LocalDateTable_da57ca2b-5eb3-4a5b-980a-89ebda7e7f58
+ref table LocalDateTable_8d64192f-30df-415e-b4c9-f46ee23a40f0
+ref table ProductosStockCritico
+
+ref cultureInfo es-MX
+

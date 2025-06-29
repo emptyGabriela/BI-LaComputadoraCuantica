@@ -1,0 +1,85 @@
+table ProductosStockCritico
+	lineageTag: dc91a126-5b1d-412c-a6b0-d42b3824b5b6
+
+	column id_producto
+		formatString: 0
+		lineageTag: f75d965d-55e9-44a4-8f60-dbd8c881b4b4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Producto[id_producto]
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		lineageTag: 519e645a-8709-4b1d-a936-2eee16444469
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Producto[nombre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		lineageTag: 2237d5e1-2441-4244-b438-342bc5de14ee
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Producto[unidad]
+
+		annotation SummarizationSetBy = Automatic
+
+	column simbolo
+		lineageTag: abc0fbf3-01f2-4bb2-933e-8d23f0221c73
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Producto[simbolo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ubicacion
+		lineageTag: b03b71ae-c9bb-45c6-b012-ca6f47534e76
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Producto[ubicacion]
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_unitario
+		lineageTag: e5c81d1c-0332-450c-a50f-eac2def4b4a6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Producto[costo_unitario]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column stock_actual
+		formatString: 0
+		lineageTag: 37938699-2611-4ea7-a539-08266e4b5bfc
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Producto[stock_actual]
+
+		annotation SummarizationSetBy = Automatic
+
+	column stock_minimo
+		formatString: 0
+		lineageTag: 5073f849-89ac-440d-bc22-5f0942f15623
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Producto[stock_minimo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ProductosStockCritico = calculated
+		mode: import
+		source = ```
+				
+				FILTER(
+				    Producto,
+				    Producto[stock_actual] < Producto[stock_minimo]
+				)
+				
+				```
+
+	annotation PBI_Id = 804ee6acfaae4dd0be07771d3338cd45
+

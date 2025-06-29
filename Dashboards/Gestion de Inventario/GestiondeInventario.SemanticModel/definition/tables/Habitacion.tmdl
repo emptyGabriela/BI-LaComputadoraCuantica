@@ -1,0 +1,89 @@
+table Habitacion
+	lineageTag: 44692541-b1a6-4efe-a9ae-64d7704b61de
+
+	column id_habitacion
+		dataType: int64
+		formatString: 0
+		lineageTag: ef90c426-7a3d-4ecf-9833-ff39ee229661
+		summarizeBy: none
+		sourceColumn: id_habitacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero
+		dataType: string
+		lineageTag: 9c0b1950-661d-4bf8-bfbb-0626d0030afc
+		summarizeBy: none
+		sourceColumn: numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_habitacion
+		dataType: string
+		lineageTag: 6b89b1b9-22df-4bae-90be-df9f759fd86d
+		summarizeBy: none
+		sourceColumn: tipo_habitacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacidad_base
+		dataType: int64
+		formatString: 0
+		lineageTag: c1a21982-f65b-4307-8510-3b83ba1e5f1a
+		summarizeBy: sum
+		sourceColumn: capacidad_base
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 34036d6a-5025-40d5-8e64-95e11ed8303d
+		summarizeBy: sum
+		sourceColumn: capacidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio_base
+		dataType: double
+		lineageTag: 2ffd9d01-5acc-4559-8c98-f1236e77f79c
+		summarizeBy: sum
+		sourceColumn: precio_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column estado_actual
+		dataType: string
+		lineageTag: 6c2d3cac-d216-4bd2-8345-e38e5b5b415e
+		summarizeBy: none
+		sourceColumn: estado_actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_estado
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7ba21519-469c-41ea-bd43-57170a7f29ec
+		summarizeBy: none
+		sourceColumn: fecha_estado
+
+		variation Variación
+			isDefault
+			relationship: 587b6fec-c68f-4e7d-894d-8e72d60ce556
+			defaultHierarchy: LocalDateTable_79e4fd8b-4c7b-439d-ba5e-b88a5ecb62e6.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Habitacion = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("172.25.224.1", "HotelDW"),
+				    dbo_Habitacion = Origen{[Schema="dbo",Item="Habitacion"]}[Data]
+				in
+				    dbo_Habitacion
+
+	annotation PBI_ResultType = Table
+

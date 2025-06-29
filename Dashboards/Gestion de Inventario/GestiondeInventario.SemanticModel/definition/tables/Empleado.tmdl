@@ -1,0 +1,86 @@
+table Empleado
+	lineageTag: 0b303092-4945-41da-91df-1417c5a299a0
+
+	column id_empleado
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d15b637-59ac-4435-aad7-7126717e1cef
+		summarizeBy: none
+		sourceColumn: id_empleado
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: 1f2a2fdc-bef3-41d9-a786-40fe8da4bd2d
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column apellido
+		dataType: string
+		lineageTag: 523089d1-d544-4aad-9493-b403ca4be89a
+		summarizeBy: none
+		sourceColumn: apellido
+
+		annotation SummarizationSetBy = Automatic
+
+	column puesto
+		dataType: string
+		lineageTag: 108737ab-35bf-460a-ba03-1afc61d5d434
+		summarizeBy: none
+		sourceColumn: puesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column departamento
+		dataType: string
+		lineageTag: 17e193f4-a17e-49ca-b55d-1d22c6e01c16
+		summarizeBy: none
+		sourceColumn: departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno
+		dataType: string
+		lineageTag: ebecc37d-913c-4e04-81d6-1f9ef376952e
+		summarizeBy: none
+		sourceColumn: turno
+
+		annotation SummarizationSetBy = Automatic
+
+	column activo
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: cdf9787c-45b7-4de2-b075-51db450f089f
+		summarizeBy: none
+		sourceColumn: activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_asignacion
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3de00b25-32d9-4002-80c1-c0006900221f
+		summarizeBy: none
+		sourceColumn: fecha_asignacion
+
+		variation Variación
+			isDefault
+			relationship: 5626a573-17c8-492f-9d92-4350010f97b7
+			defaultHierarchy: LocalDateTable_5cafcf08-ed6f-498e-8179-c85565d5b0bd.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Empleado = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("172.25.224.1", "HotelDW"),
+				    dbo_Empleado = Origen{[Schema="dbo",Item="Empleado"]}[Data]
+				in
+				    dbo_Empleado
+
